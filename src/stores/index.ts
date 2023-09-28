@@ -15,7 +15,7 @@ export const useHeaderStore = defineStore('header', {
       navLinks: [
         {
           id: 1,
-          name: 'home',
+          name: 'Home',
           route: '/home'
         },
         {

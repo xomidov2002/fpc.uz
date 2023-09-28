@@ -4,7 +4,7 @@ export default  {
   theme: {
     extend: {
       colors: {
-        menucolor: '#F3F3F3'
+        bg: '#FAFAFA'
       }
     },
   },
