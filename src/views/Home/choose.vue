@@ -1,27 +1,7 @@
 <script setup lang="ts">
 import BaseChoose from '@/components/BaseChoose/index.vue'
-// const icons = qa[
-//   {
-//     icon: 'public/ChooseIcons/1.svg',
-//     num: '3K',
-//     name: 'cases done'
-//   },
-//   {
-//     icon: 'public/ChooseIcons/2.svg',
-//     num: '45',
-//     name: 'happy costumers'
-//   },
-//   {
-//     icon: 'public/ChooseIcons/3.svg',
-//     num: '12+',
-//     name: 'award winning'
-//   },
-//   {
-//     icon: 'public/ChooseIcons/4.svg',
-//     num: '1.5K',
-//     name: 'cases done'
-//   }
-// ]
+import { useChoosePage } from '../composable';
+// const { chooses } = useChoosePage()
 </script>
 <template>
   <div class="bg-bg">
