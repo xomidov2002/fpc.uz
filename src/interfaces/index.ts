@@ -7,7 +7,7 @@ export interface NavLink {
   name: string,
   route: string
 }
-export interface Chooses{
+export interface Chooses {
   id: number,
   icon: string,
   num: string,
