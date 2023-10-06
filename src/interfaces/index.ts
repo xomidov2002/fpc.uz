@@ -13,3 +13,9 @@ export interface Chooses {
   num: string,
   name: string
 }
+export interface Cards {
+  id: number,
+  icon: string,
+  title: string,
+  subtitle: string
+}

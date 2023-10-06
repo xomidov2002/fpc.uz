@@ -5,7 +5,7 @@ const store: any = useHeaderStore()
 const { navLinks } = store
 </script>
 <template>
-  <div class="backdrop-blur-sm bg-white/30">
+  <div class="backdrop-blur-md bg-white nav">
     <div class="container mx-auto lg:px-15 py-6 px-5">
       <div>
         <div class="flex items-center justify-between">
@@ -32,7 +32,7 @@ const { navLinks } = store
   content: '';
   width: 0;
   height: 2px;
-  background-color: #737373;
+  background-color: #252B42;
   left: 0;
   bottom: 0;
   transition: all 0.2s linear;
@@ -46,7 +46,7 @@ const { navLinks } = store
 .all-submenu::before {
   content: '';
   width: 0;
-  background-color: #737373;
+  background-color: #252B42;
   right: 0;
   top: 0;
   transition: all 0.2s linear;
@@ -55,5 +55,12 @@ const { navLinks } = store
 
 .all-submenu:hover::before {
   width: 100%;
+}
+.nav{
+    position: fixed;
+    width: 100%;
+    background: var(--body-color);
+    transition: .3s;
+    z-index: 100;
 }
 </style>

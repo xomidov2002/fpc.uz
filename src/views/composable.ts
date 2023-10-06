@@ -1,4 +1,5 @@
 import { type Chooses } from "@/interfaces";
+import { type Cards } from "../interfaces";
 import { ref } from "vue";
 export function useChoosePage() {
   const chooses = ref<Chooses[]>([
@@ -29,5 +30,30 @@ export function useChoosePage() {
   ])
   return {
     chooses
+  }
+}
+export function useCardPage() {
+  const cards = ref<Cards[]>([
+    {
+      id: 1,
+      icon: 'icons-1/1.svg',
+      title: 'Digital Marketing',
+      subtitle: 'We focus on ergonomics and meeting you where you work.'
+    },
+    {
+      id: 2,
+      icon: 'icons-1/2.svg',
+      title: 'National top 50 firms',
+      subtitle: "Just type what's on your mind and we'll get you there."
+    },
+    {
+      id: 3,
+      icon: 'icons-1/1.svg',
+      title: 'Digital Marketing',
+      subtitle: 'the quick fox jumps over the lazy dog'
+    },
+  ])
+  return {
+    cards
   }
 }
