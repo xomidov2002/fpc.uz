@@ -16,6 +16,12 @@ export interface Chooses {
 export interface Cards {
   id: number,
   icon: string,
+  hover: string,
   title: string,
   subtitle: string
+}
+export interface PracticeCards {
+  title: string,
+  subtitle: string,
+  img: string
 }
