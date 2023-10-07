@@ -25,3 +25,9 @@ export interface PracticeCards {
   subtitle: string,
   img: string
 }
+export interface IntouchCards {
+  icon: string,
+  hoverIcon: string,
+  subtitle: string,
+  title: string
+}

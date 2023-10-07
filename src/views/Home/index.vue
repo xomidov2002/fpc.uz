@@ -4,6 +4,8 @@ import BaseCard from '@/components/BaseCard/index.vue'
 import Practice from './practice.vue'
 import Choose from './choose.vue'
 import businessService from './businessService.vue'
+import getInTouch from './getInTouch.vue'
+import BaseFooter from '@/components/BaseFooter/index.vue'
 import { useCardPage } from '../composable';
 const { cards } = useCardPage()
 </script>
@@ -39,5 +41,11 @@ const { cards } = useCardPage()
   </div>
   <div>
     <businessService />
+  </div>
+  <div class="bg-bg">
+    <getInTouch />
+  </div>
+  <div>
+    <BaseFooter />
   </div>
 </template>

@@ -1,6 +1,7 @@
 import { type Chooses } from "@/interfaces";
 import { type Cards } from "../interfaces";
 import { type PracticeCards } from "@/interfaces";
+import { type IntouchCards } from "@/interfaces"
 import { ref } from "vue";
 export function useChoosePage() {
   const chooses = ref<Chooses[]>([
@@ -86,5 +87,30 @@ export function usePracticePage() {
   ])
   return {
     practiceCards
+  }
+}
+export function useInTouchPage() {
+  const touchCards = ref<IntouchCards[]>([
+    {
+      icon: '/getintouch/blue.svg',
+      hoverIcon: '/getintouch/white.svg',
+      subtitle: 'georgia.young@example.com',
+      title: 'Get Support'
+    },
+    {
+      icon: '/getintouch/blue.svg',
+      hoverIcon: '/getintouch/white.svg',
+      subtitle: 'georgia.young@example.com',
+      title: 'Get Support'
+    },
+    {
+      icon: '/getintouch/blue.svg',
+      hoverIcon: '/getintouch/white.svg',
+      subtitle: 'georgia.young@example.com',
+      title: 'Get Support'
+    }
+  ])
+  return {
+    touchCards
   }
 }
