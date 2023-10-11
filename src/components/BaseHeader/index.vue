@@ -14,7 +14,7 @@ const { navLinks } = store
             <div class="w-10 h-10">
               <img src="/logo-1.png" class="object-cover w-full" alt="">
             </div>
-            <span class="text-xl font-semibold">Full Poin Consult</span>
+            <span class="text-xl font-semibold">Full Point Consult</span>
           </div>
           <!-- --------------------------MENUS------------------------------ -->
           <div class="flex gap-8 menus">

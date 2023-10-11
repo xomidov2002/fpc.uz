@@ -7,7 +7,7 @@
           <img class="object-cover" src="/logo-1.png" alt="">
         </div>
         <div class="text-center">
-          <p class="text-white text-lg font-bold">Full Poin Consult</p>
+          <p class="text-white text-lg font-bold">Full Point Consult</p>
           <p class="text-white text-base font font-semibold">EST. 2022</p>
         </div>
       </div>
