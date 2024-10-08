@@ -1,0 +1,156 @@
+{
+  "navbar":{
+    "brandName": "uz",
+    "mainPage": "Bosh sahifa",
+    "solution" : "Yechimlar",
+    "projects": "Loyihalar",
+    "aboutUs" : "Biz haqimizda",
+    "services": "Xizmatlar",
+    "clients": "Mijozlarimiz",
+    "contact": "Bog'lanish",
+    "subTitle" : "Biz mijozlarimiz uchun eng yaxshi xizmatlarni taqdim etamiz"
+  },
+  
+
+  "mainPage": {
+    "messageSent" : "Xabar muvaffaqiyatli yuborildi!",
+    "messageError" : "Iltimos qaytadan urinib ko'ring !",
+    "fillAllFields" : "Iltimos ma'lumotlarni to'liq kiriting !",
+    "mainTitle" : "Sizning biznesingiz uchun",
+    "mainSecondTitle" : "xizmatlari",
+    "mainSubtitle" : "Bajarilgan ishlarning yuqori sifati uchun mas'ul bo'lgan yuqori malakali mutaxassislarga ega tez rivojlanayotgan kompaniya! Biz bilan ishonchli!",
+    "mainButton" : "Batafsil",
+    "block1" : "individual yondashuv",
+    "block2" : "keng qamrovli yechim",
+    "block3" : "professionallik va tajriba",
+    "businessTitle" : "Nima uchun Full Point consult ?",
+    "businessSubtitle" : "Biz rasman, shartnoma asosida ishlaymiz, shuningdek, qonun doirasida to'liq javob beramiz, bu sizga kafolat va xotirjamlik beradi!",
+    "businessMain" : "Bizning sohada eng ishonchli",
+    "businessText" : "Full Point Consult - bu 2022 yilda tashkil etilgan hamda dinamik rivojlanayotgan konsulting kompaniyasi. Biz marketing, moliya, IT va biznes jarayonlarini tashkil etish sohalarida biznesni har tomonlama qo'llab quvvatlashga qaratilgan keng ko'lamli xizmatlarni taqdim etamiz. Bizning missiyamiz - kompaniyalarga o'zining operatsion va strategik jarayonlarini yaxshilash, samaradorlikni oshirish va rivojlanishning yangi bosqichiga chiqishga yordam berish.",
+    "businessser1" : "agar bosh buxgalter g'oyib bo'lgan bo'lsa va nima qilishni bilmasangiz;",
+    "businessser2" : "agar buxgalteriya hisobi bir yil davomida o'tkazilmagan bo'lsa va hamma narsani zudlik bilan tiklash kerak bo'lsa.",
+    "busSolution1" : "Individual yondashuv.",
+    "busSolution2" : "Professionallik va tajriba.",
+    "busSolution3" : "Natijaga yo'naltirilganlik",
+    "Solution1" : "Biz sizning biznes jarayonlaringizni batafsil o'rganib chiqamiz va sizning o'ziha xos ehtiyojingizga mos alohida yechimlar beramiz.",
+    "Solution2" : "Bizning jamoamiz turli sohalardagi malakali mutaxassislardan iborat bo'lib bu bizga har qanday vazifa uchun kompleks yechimlarni taqdim etish imkonini beradi.",
+    "Solution3" : "Biz biznesingizning o'sishi va rivojlanishiga olib keladigan aniq natijalarga erishishga e'tibor qaratamiz.",
+    "practiceTitle" : "Bu holat sizga tanishmi?",
+    "practiceSubtitle" : "Muammoingizni aniqlang va moslashtirilgan yechimni oling",
+    "serviceTitle" : "Biz nimani taklif qilamiz?",
+    "contact" : "Aloqa uchun.",
+    "contactMail" : "Kompaniya yoki sizning elektron pochtangiz",
+    "contactName" : "Ismingiz",
+    "contactNumber" : "Telefon raqamingiz",
+    "contactText" : "Qanday yordam bera olamiz ?",
+    "Submit" : "Yuborish",
+    "ourPro" : "Bizning mijozlarimiz nima deyishadi?",
+    "partners" : "Bizning mijozlar"
+  },
+
+  "team" : {
+    "ourTeam" : "Bizning jamoa",
+    "director" : "direktor",
+    "menejer" : "menejer",
+    "specialist" : "mutaxassis",
+    "education" : "Ta'lim",
+    "experience" : "Ish tajribasi",
+    "project" : "loyihalar",
+    "certificate" : "sertifikatlar",
+    "alisherUniver" : "oliy ma'lumot, bakalavr darajasi (Ufadagi Boshqird davlat universiteti",
+    "aleksandrUniver" : "oliy ma'lumot, bakalavriat (Sankt-Peterburg davlat agrar universiteti)",
+    "samarUniver" : "oliy ma'lumot, bakalavriat (Toshkentdagi Turin universiteti)",
+    "azizbekUniver" : "oliy ma'lumot, bakalavriat (Toshkentdagi Turin universiteti)",
+    "husniddinUniver" : "oliy ma’lumot, bakalavriat (Toshkent davlat transport universiteti)"
+  },
+  "mainProject" : {
+    "subtitle" : "'FULL POINT CONSULT' MChJ bilan bir necha yirik loyihalar bo‘yicha hamkorlik qildik. Jumladan, kon-metallurgiya, avtomobil ishlab chiqarish, qishloq xo‘jaligi mashinasozligi va yangi shtamplash inshootlarini tashkil etish bo‘yicha ishlar amalga oshirildi. Tashkilot mutaxassislari o‘z ishini yuqori darajada bajarishdi, barcha taklif va mulohazalarni tezkorlik bilan ko‘rib chiqishdi. 'FULL POINT CONSULT' o‘zining professional yondashuvi va malakali jamoasi bilan hamkorlikda katta yordam ko‘rsatdi."
+  },
+  
+
+  "ourServices" : {
+    "marketing" : "Marketing",
+    "marketingTitle" : "Daromadingizni oshiradigan samarali strategiyalar.",
+    "moliya" : "Moliyaviy hisob va tahlil",
+    "moliyaTitle" : "Qaror qabul qilish uchun shaffof va aniq moliyaviy hisobotlar.",
+    "buxgalteriya" : "Buxgalteriya hisobi",
+    "buxgalteriyaTitle" : "Xatosiz va o'z vaqtida hisobot berish.",
+    "arxitektura" : "Texnik-iqtisodiy asosni yozish",
+    "arxitekturaTitle" : "Loyihalarning iqtisodiy maqsadga muvofiqligini ekspert baholash.",
+    "qurilish" : "Savdo bo'limini qurish",
+    "qurilishTitle" : "Haqiqatan ham sotadigan tizim.",
+    "it" : "Veb-sayt va ilovalarni ishlab chiqish",
+    "itTitle" : "Mijozlarni jalb qiladigan raqamli echimlar.",
+    "kamera" : "Biznesni tizimlashtirish va avtomatlashtirish",
+    "kameraTitle" : "Samaradorlikni oshirish uchun vositalar."
+  },
+
+
+  "advices" : {
+    "first" : "Sizning marketingingiz siz kutgan natijalarni bermayaptimi?",
+    "second" : "Moliyaviy buxgalteriya hisobi murakkab va foyda aniq emasmi?",
+    "third" : "Biznes jarayonlarini tizimlashtirish va avtomatlashtirish bilan bog'liq qiyinchiliklar?",
+    "fourth" : "Savdo bo'limi o'z maqsadlariga erishmayaptimi?",
+    "fifth" : "Samarali veb-sayt yoki mobil ilovangiz yo'qmi?",
+    "title" : "Biz sizning biznesingizga mavjud muammolarni yechishga va yangi marralarni zabt etishga yordam berishga tayyormiz."
+  },
+
+  "table" : {
+    "first" : "Tovar (ishlar, xizmatlar) ob'ektining nomi",
+    "second" : "Mijoz nomi",
+    "third" : "Yetkazib berish sanasi",
+    "fourth" : "Batafsil ma'lumot",
+    "info" : "Batafsil"
+  },
+
+  "projects" : {
+    "aboutUs" : "Biz haqimizda",
+    "clients" : "Bizning mijozlar",
+    "marketing" : "Biz bozorlarni diagnostik tadqiq etishda, rejalashtirishda, marketing kontseptsiyalarini ishlab chiqishda, shuningdek kompaniyalarda marketingni boshqarishda yordam beramiz, jumladan: Tadqiqot va tahlil;     Marketing strategiyasi; Marketing auditi; Marketing tizimini tashkil etish; Reklama va PR kampaniyalari; Amalga oshirish, nazorat qilish va qo’llab-quvvatlash; Bozor tadqiqoti, strategiyalarni ishlab chiqish.",
+    "moliya" : "Hozirgi kunda mamalakatimizda yuzaga kelgan kuchli raqobatchilik davrida har bir korxona kamroq sarf harajat qilib ko'proq daromad olgan holda o'z raqibidan oldin yurishni xohlaydi. Moliyaviy xizmat ham aynan shu maqsadlarda amalga oshiriladi, ya'ni harajatlarni optimallashtirish, rejalashtirish, kompaniyaning byudjetini to'g'ri taqsimlash, soliqlarni optimallashtirish va boshqalar. Bugungi kunda bunday xizmatga yanada talab oshmoqda. Nazariy jihatdan olib qaraganda, biznes g'oyaning muvaffaqiyatini uni rejalashtirish bosqichidayoq aniqlasa bo'ladi, lekin hamma ham buni aniq tahlil qila olmaydi.",
+    "kamera" : "IP va HD, FULL HD KAMERA video kuzatuvi har qanday murakkablikdagi eshik telefonlarini o'rnatish (har qanday hajmdagi, kvartiralardan fabrikalargacha). Ilgari o'rnatilgan uskunani demontaj qilish. Telefoningiz va planshet kompyuteringizda kameraning ONLAYN ko'rish ulanishi simsiz Wi-Fi xonadonlar, kottejlar, ofislar, omborlar, banklar, do'konlar, ko'chalar kabi har qanday murakkablikdagi ob'ektlarda raqamli video kuzatuv tizimlari va kompleks qo'riqlash tizimlarini individual loyihalash, o'rnatish va texnik xizmat ko'rsatish bo'yicha to'liq xizmatlarni taqdim etadi. shuningdek, avtomobillar va qurilish mashinalari uchun video kuzatuv.",
+    "arxitek" : "O'zbekiston bo'yicha Arxitektura-dizayn va loyihalash xizmatlari. <<Fulll Point Consult>> loyihasi O'zbekiston bo'yicha Arxitektura-dizayn va loyihalash xizmatlari xizmatlarini buyurtma qilish istagidagilar uchun eng maqbul yechimdir. Arxitektura-dizayn va loyihalash xizmatlari bo’yicha xizmatlar O'zbekiston bo'yichagi arzon narxlar va  yetakchi kompaniyalardan keng tanlov bizning katalogda.",
+    "buxgalteriya" : {
+      "begin" : "Bizga ishonishadi va bizni tavsiya qilishadi. Biz sizninig vaqtingizni, asablaringizni va albatta pulingizni himoya qilamiz!",
+      "first" : "Hisobotlar qanday bo’lishi kerak va ular nima uchun kerak?",
+      "second" : "O’z hisobchingizni qanday tekshirishingiz mumkin? Yoki, hamma hujjatlarni topshirish xavfsizmi?",
+      "third" : "Nimani hisobiga pulingizni tejashingiz mumkin?",
+      "fourth" : "Qanday qilib to’lovlarni kamaytirish mumkin? (To’lovlarni qanday kamaytirish mumkin?)",
+      "fifth" : "Hujjatdagi xatoliklar sababli yuzga kelgan mijoz noroziligidan qanday qochish mumkin?",
+      "sixth" : "Jarimaga tortilmaslik uchun Qanday? Qayerga? va Qancha? soliq to’lash kereak?",
+      "last" : "Shu va shu kabi savollarga javob topishingiz mumkin"
+    },
+    "it" : "Web sahifa, internet do'kon, xizmat ko'rsatish saytlari, ma'lumot beruvchi saytlar yaratish, optimallashtirish kabi xizmatlar mavjud ",
+    "qurilish" : {
+      "begin" : "O'zbekiston bo'yicha Qurilish xizmatlari xizmatlarini buyurtma qilish istagidagilar uchun eng maqbul yechimdir. Qurilish xizmatlari bo’yicha xizmatlar O'zbekiston bo'yichagi arzon narxlar va  yetakchi kompaniyalardan keng tanlov bizning katalogda."
+    }
+  },
+  "services" : {
+    "service" : "xizmatimiz",
+    "marketing" : {
+      "info1" : "Zamonaviy ishbilarmonlik muhiti kompaniyalarga yuqori talablarni qo'yadi va ulardan ko'pchiligi bir biriga o'zaro bog'liq bo'lgan kompleks muammolarga duch kelishadi. Brendning yetarli darajada taniqli bo'lmasligi va samarasiz marketing strategiyasi yangi mijozlar oqimini pasaytiradi va raqobatbardosh pozitsiyalarning zaiflashishiga olib keladi.",
+      "info2" : "Biz sizga brend taniqliligini oshiradigan va yangi mijozlarni jalb qiladigan samarali marketing strategiyasini ishlab chiqishda va amalga oshirishda yordam beramiz. Sizning bozordagi ulushingizni oshiradigan samarali reklama kanallarini taklif qilish uchun biz bozorni, raqobatchilarni va maqsadli auditoriyani tahlil qilamiz."
+    },
+    "finance" : {
+      "info1" : "Biz sizning moliyaviy hisobingiz va soliq majburiyatlaringizni optimallashtiramiz. Mutaxassislarimiz aniq buxgalteriya hisobini o'rnatadilar va to'g'ri moliyaviy hisobotlarni tayyorlaydilar, bu jarimalar xavfini kamaytiradi va moliyaviy shaffoflikni ta'minlaydi. Biz sizga xarajatlarni kamaytirishga va resurslarni samarali boshqarishga yordam beramiz.",
+      "info2" : "Biznesni rejalashtirish: Bizning puxta tayyorlangan biznes rejamizga asosan raqiblaringiz orasida birinchilar qatorida bo'ling. Biz faoliyatingizning bozordagi moliyaviy ahvolini baholab beramiz va tavakkalchilikni hisoblab beramiz. Bunda siz maqsadlaringizni o'zingizga ishonch bilan amalga oshirasiz. Dadil harakatlanishingiz uchun esa korxonangizni ilg'orlar safiga chiqarish maqsadida butun bir individual strategiya ishlab chiqamiz."
+    },
+    "accounting" : {
+      "info1" : "Biz bilan hamkorlik qilishning afzalliklari: Shubhasiz, bu buxgalteriya xizmatini amalga oshirishdagi ko'p yillik tajriba; Zarur ma'lumotga ega bo'lish, sifatli xizmat va tezkorlik; Soliqqa tortish sohasi bo'yicha himoyalanganlik hamda xodimlarimizning o'z vazifalarini bajarishda yuqori mas'uliyatliligi. Zarur ma'lumotga ega bo'lish, sifatli xizmat va tezkorlik; Soliqqa tortish sohasi bo'yicha himoyalanganlik hamda xodimlarimizning o'z vazifalarini bajarishda yuqori mas'uliyatliligi.",
+      "info2" : "«Buxgalteriya xizmati» xizmat turiga nimalar kiradi: Buxgalteriya hujjatlarining yuritilishi, xodimlar bilan ishlash bo'yicha hujjatlarning yuritilishi, soliq va boshqa davlat organlariga tegishli hisobotlarning o'z vaqtida taqdim etilishi; Bankka oid hujjatlarning yuritilishi; Hujjatlarning saqlanishini ta'minlash hamda Sizning ruxsatingizsiz ularning mazmuni oshkor etilmasligi; Soliq inspeksiyalari va boshqa davlat organlari bilan o'zaro munosabatlarda buyurtmachining manfaatlarini himoya qilish."
+    },
+    "architecture" : {
+      "info1" : "Biz sizning loyihalaringiz uchun professional texnik-iqtisodiy asosnoma yaratamiz, shu jumladan xarajatlar va risklarni tahlil qilish, daromadlarni prognozlash va mumkin bo'lgan istiqbollarni baholash. Bu sizga ko'proq asosli qarorlar qabul qilish va resurslardan samarali foydalanish imkonini beradi."
+    },
+    "construction" : {
+      "info1" : "strategiyani ishlab chiqish va xodimlarni zamonaviy savdo usullariga o'rgatishda yordam beramiz. Bu sizga sotish hajmini, mijozlar bazasini ko'paytirishni va natijada daromadni oshirishni ta'minlaydi."
+    },
+    "it" : {
+      "info1" : "Biz siz uchun imidjingizni yaxshilaydigan va biznesingizga ishonchni oshiradigan zamonaviy va foydalanuvchilarga qulay veb-sayt yoki mobil ilovani ishlab chiqamiz. Biz sizning biznes ehtiyojlaringizga mos keladigan, oson kengaytiriladigan va mijozlaringiz uchun ishlatish uchun qulay yechim yaratamiz.",
+      "info2" : "Veb-saytlarni yaratish, yutirish va optimallashtirish, Dasturiy ta'minotni o'rnatish va sozlash"
+    },
+    "camera" : {
+      "info1": "Asosiy biznes jarayonlarini avtomatlashtirish: masalan, savdo yoki mijozlarga xizmat ko’rsatishni boshqarish. Bunday holda, u to’g’ridan-to’g’ri sotish hajmini, ishlab chiqarilgan mahsulot sonini oshirish va butun biznesning rentabelligini oshirish uchun amalga oshiriladi."
+    }
+  }
+}

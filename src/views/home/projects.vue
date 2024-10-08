@@ -1,0 +1,119 @@
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+import BaseProductCard from '@/components/BaseProductCard/index.vue'
+interface Product {
+  id: number
+  subtitle: string
+  title: string
+  date: string
+  images: string[]
+  info: string
+}
+
+// Mahsulotlar ro'yxati
+const products = computed<Product[]>(() => {
+  return [
+    {
+      id: 0,
+      subtitle:
+        '«Организация производства и ремонта горно-металлургических машин и оборудования на базе Центрального ремонтно-механического завода АО «Алмалыкский ГМК» ',
+      title: 'АО «O’ZOG’IRSANOATLOYIHA»',
+      date: '2023 май',
+      images: ['/advices/1.jpg', '/advices/2.jpg', '/advices/3.jpg', '/advices/4.jpg'],
+      info: 'this is first ID'
+    },
+    {
+      id: 1,
+      subtitle:
+        '«Организация новых штампосварных мощностей на территории АО «Uzauto Motors» в г. Асака, Андижанской области» ',
+      title: 'АО «O’ZOG’IRSANOATLOYIHA»',
+      date: '2023 сентябрь',
+      images: ['/advices/2.jpg', '/advices/1.jpg', '/advices/3.jpg', '/advices/4.jpg'],
+      info: 'this is second ID'
+    },
+    {
+      id: 2,
+      subtitle: '«Организация производства автомобилей на новых источниках энергии» ',
+      title: 'АО «O’ZOG’IRSANOATLOYIHA»',
+      date: '2023 сентябрь',
+      images: ['/advices/3.jpg', '/advices/2.jpg', '/advices/4.jpg', '/advices/1.jpg'],
+      info: 'this is third ID'
+    },
+    {
+      id: 3,
+      subtitle: '«Организация производства автомобилей на новых источниках энергии» ',
+      title: 'АО «O’ZOG’IRSANOATLOYIHA»',
+      date: '2023 сентябрь',
+      images: ['/advices/4.jpg', '/advices/2.jpg', '/advices/3.jpg', '/advices/1.jpg'],
+      info: 'this is fourth ID'
+    },
+    {
+      id: 4,
+      subtitle: 'Маркетинговое исследование для текстильной продукции (лёгкая промышленность)',
+      title: 'ООО «Perfect Textile Company»',
+      date: '2021 март',
+      images: ['/advices/4.jpg', '/advices/2.jpg', '/advices/3.jpg', '/advices/1.jpg'],
+      info: 'this is fifth ID'
+    },
+    {
+      id: 5,
+      subtitle: 'Маркетинговое исследование в сфере общепита',
+      title: 'ООО «Belissimo»',
+      date: '2021 февраль',
+      images: ['/advices/4.jpg', '/advices/2.jpg', '/advices/3.jpg', '/advices/1.jpg'],
+      info: 'this is sixth ID'
+    },
+    {
+      id: 6,
+      subtitle: 'Маркетинговое исследование в сфере общепита и продвижение брэнда',
+      title: 'Сеть ресторанов «Farfor» (Россия)',
+      date: '2022-2023 гг',
+      images: ['/advices/4.jpg', '/advices/2.jpg', '/advices/3.jpg', '/advices/1.jpg'],
+      info: 'this is seventh ID'
+    }
+  ]
+})
+
+const showAll = ref(false)
+
+// Ko'rsatilayotgan mahsulotlarni boshqarish
+const visibleProducts = computed(() => {
+  return showAll.value ? products.value : products.value.slice(0, 4)
+})
+
+// Kartalarni ko'proq yoki kamroq ko'rsatish funksiyasi
+const toggleView = () => {
+  showAll.value = !showAll.value
+}
+</script>
+
+<template>
+  <div class="container mx-auto px-5">
+    <p class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600 mb-10">Bizning Loyihalarimmiz</p>
+    <transition-group name="fade" tag="div" class="grid justify-center grid-cols-4 gap-5">
+      <div v-for="(product, index) in visibleProducts" :key="index">
+        <BaseProductCard :option="product" />
+      </div>
+    </transition-group>
+
+    <div class="w-full flex justify-center">
+      <button
+        @click="toggleView"
+        class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+      >
+        {{ showAll ? 'Kamroq ko‘rish' : 'Ko‘proq ko‘rish' }}
+      </button>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
