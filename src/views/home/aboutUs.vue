@@ -124,7 +124,7 @@ function toggleVariable() {
             <p>{{ t('mainPage.Solution2') }}</p>
             </div>
           </div>
-          <div class="bg-[url('/images/about-3.jpg')] bgimage sm:w-1/2 h-[400px]">
+          <div class="bg-[url('/images/about-3.png')] bgimage sm:w-1/2 h-[400px]">
             <div class="shadow"></div>
             <div>
               <p class="p-3 border-b border-b-white font-bold tracking-widest">{{ t('mainPage.busSolution3') }}</p>

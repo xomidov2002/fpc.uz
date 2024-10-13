@@ -1,6 +1,6 @@
 <template>
   <div  id="main"
-    class="bg-[url(/lion.jpg)] w-full h-[100vh] bg-no-repeat bg-center bg-cover relative flex justify-start flex-cols items-center"
+    class="bg-[url(/lion.jpg)] bg-fixed w-full h-[100vh] bg-no-repeat bg-center bg-cover relative flex justify-start flex-cols items-center"
   >
     <div class="container flex justify-between items-center relative mx-auto px-5 select-none">
       <div>
@@ -34,9 +34,9 @@
         </div>
 
         <button class="button-86" role="button">
-          <RouterLink class="uppercase font-bold" to="/contact">{{
+          <a class="uppercase font-bold" href="#contact-section">{{
             t('mainPage.mainButton')
-          }}</RouterLink>
+          }}</a>
         </button>
       </div>
     </div>

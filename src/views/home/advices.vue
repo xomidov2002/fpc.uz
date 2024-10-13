@@ -29,7 +29,7 @@ const { t } = useI18n();
             </div>
           </div>
           <div class="flex gap-5 w-full">
-            <div class="images bg-[url('/images/advice-3.jpg')] w-3/5 h-[250px]">
+            <div class="images bg-[url('/images/advice-3.webp')] w-3/5 h-[250px]">
               <div class="shadow"></div>
               <div class="box">
                 <p class="text">{{ t('advices.third') }}</p>
