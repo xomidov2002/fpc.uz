@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import BaseButton from '@/components/BaseButton/index.vue'
+const emit = defineEmits(['byInfoUser'])
 const props = defineProps({
     option: {
         type: Object,
@@ -19,7 +20,7 @@ const props = defineProps({
       </div>
       <div>
         <p>{{ props.option.date }}</p>
-        <BaseButton name="Batafsil" />
+        <BaseButton @click="$emit('byInfoUser')" name="Batafsil" />
       </div>
     </div>
   </div>

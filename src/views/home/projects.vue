@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import BaseProductCard from '@/components/BaseProductCard/index.vue'
+import BaseUsermodal from '@/components/BaseUserModal/index.vue'
 interface Product {
   id: number
   subtitle: string
@@ -85,14 +86,38 @@ const visibleProducts = computed(() => {
 const toggleView = () => {
   showAll.value = !showAll.value
 }
+
+
+const openUserModal = ref<boolean>(false)
+
+const currentUser = ref<any>({})
+function getEachUser(id: number) {
+  for (let i = 0; i < products.value.length; i++) {
+    if (products.value[i].id === id) {
+      currentUser.value = products.value[i]
+      toggleVariable()
+      break
+    }
+  }
+}
+function toggleVariable() {
+  // if(!openUserModal) {
+  //   document.body.style.overflow = '';
+  // }
+  // else if(openUserModal){
+  //   document.body.style.overflow = 'hidden';
+  // }
+  openUserModal.value = !openUserModal.value
+}
 </script>
 
 <template>
+  <BaseUsermodal class="z-50" :isOpen="openUserModal" :info="currentUser" @handleClicked ="toggleVariable" />
   <div class="container mx-auto px-5">
     <p class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600 mb-10">Bizning Loyihalarimmiz</p>
     <transition-group name="fade" tag="div" class="grid justify-center grid-cols-4 gap-5">
       <div v-for="(product, index) in visibleProducts" :key="index">
-        <BaseProductCard :option="product" />
+        <BaseProductCard :option="product" @byInfoUser="getEachUser(product.id)"/>
       </div>
     </transition-group>
 

@@ -6,6 +6,7 @@ import { useI18n } from 'vue-i18n'
 const { t, locale, setLocaleMessage } = useI18n()
 const selectedLanguage = ref(locale.value)
 const isActive = ref(false)
+const activeSection = ref('')
 
 const changeLanguage = async () => {
   await setLocaleMessage(
@@ -20,50 +21,20 @@ const toggleClass = () => {
 }
 
 interface Navbar {
-  id: number // Changed from `id: 1` to `id: number`
+  id: number
   name: string
   sectionId: string
 }
 
-const navLinks = computed<Navbar[]>(() => {
-  return [
-    {
-      id: 0,
-      name: t('navbar.mainPage'),
-      sectionId: "#main"
-    },
-    {
-      id: 1,
-      name: t('navbar.solution'),
-      sectionId: '#advices-section'
-    },
-    {
-      id: 2,
-      name: t('navbar.services'),
-      sectionId: '#services-section'
-    },
-    {
-      id: 3,
-      name: t('navbar.projects'),
-      sectionId: '#projects-section'
-    },
-    {
-      id: 4,
-      name: t('navbar.aboutUs'),
-      sectionId: '#aboutus-section'
-    },
-    {
-      id: 5,
-      name: t('navbar.contact'),
-      sectionId: '#contact-section'
-    },
-    {
-      id: 6,
-      name: t('navbar.clients'),
-      sectionId: '#client-section'
-    }
-  ]
-})
+const navLinks = computed<Navbar[]>(() => [
+  { id: 0, name: t('navbar.mainPage'), sectionId: '#main' },
+  { id: 1, name: t('navbar.solution'), sectionId: '#advices-section' },
+  { id: 2, name: t('navbar.services'), sectionId: '#services-section' },
+  { id: 3, name: t('navbar.projects'), sectionId: '#projects-section' },
+  { id: 4, name: t('navbar.aboutUs'), sectionId: '#aboutus-section' },
+  { id: 5, name: t('navbar.contact'), sectionId: '#contact-section' },
+  { id: 6, name: t('navbar.clients'), sectionId: '#client-section' },
+])
 
 interface Language {
   id: number
@@ -77,8 +48,6 @@ const langs = reactive<Language[]>([
   { id: 2, title: 'UZ', icon: 'uzb', value: 'uz' }
 ])
 
-const activeSection = ref('')
-
 // Scroll to section
 const scrollToSection = (sectionId: string) => {
   const cleanId = sectionId.startsWith('#') ? sectionId.slice(1) : sectionId
@@ -88,7 +57,7 @@ const scrollToSection = (sectionId: string) => {
   }
 }
 
-// Detect active section
+// Detect active section with IntersectionObserver
 const observeSections = () => {
   const sections = document.querySelectorAll('section')
   const observer = new IntersectionObserver(
@@ -99,9 +68,8 @@ const observeSections = () => {
         }
       })
     },
-    { threshold: 0.5 }
+    { threshold: 0.5 } // Sensitivity for activating the section
   )
-
   sections.forEach((section) => observer.observe(section))
 }
 
@@ -109,6 +77,7 @@ onMounted(() => {
   observeSections()
 })
 </script>
+
 
 <template>
   <div class="bg-black backdrop-blur-sm nav">
@@ -130,7 +99,9 @@ onMounted(() => {
               v-for="(navlink, index) in navLinks"
               :key="index"
               @click="scrollToSection(navlink.sectionId)"
-              :class="{ 'active-class': activeSection === navlink.sectionId.slice(1) }"
+              :class="{
+                'active-class': activeSection === navlink.sectionId.slice(1)
+              }"
             >
               <a
                 class="all-submenu text-lg text-white hover:text-[#080D75] 2xl:text-2xl font-[semibold]"
@@ -138,6 +109,7 @@ onMounted(() => {
                 {{ navlink.name }}
               </a>
             </div>
+
             <BaseSelect
               color="white"
               :options="langs"
@@ -148,7 +120,7 @@ onMounted(() => {
         </div>
       </div>
     </div>
-  </div>
+  </div>  
 
   <!-- FOR MOBILE -->
   <div class="block md:hidden fixed top-0 right-0 w-full z-50 bg-[#252525]">
@@ -191,7 +163,7 @@ onMounted(() => {
         </div>
         <div class="cursor-pointer select-none" v-for="(navlink, index) in navLinks" :key="index">
           <a
-            @click="scrollToSection(navlink.sectionId); toggleClass()"
+            @click="scrollToSection(navlink.sectionId), toggleClass()"
             class="all-submenu text-lg text-white 2xl:text-2xl font-[semibold]"
           >
             {{ navlink.name }}
@@ -209,22 +181,19 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.clip-path {
-  clip-path: polygon(7% 0, 93% 0, 100% 100%, 0% 100%);
+.active-class a {
+  background-color: #ff0000; /* Red background for active */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
+  color: #fff;
 }
 
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.5s ease;
+.all-submenu {
+  position: relative;
+  padding: 5px;
 }
 
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
-}
-
-.active-class {
-  @apply right-0;
+.all-submenu:hover::after {
+  width: 100%;
 }
 
 .all-submenu::after {
@@ -232,10 +201,10 @@ onMounted(() => {
   width: 0;
   height: 2px;
   background-color: #080d75;
+  position: absolute;
   left: 0;
   bottom: 0;
   transition: all 0.2s linear;
-  position: absolute;
 }
 
 .all-submenu:hover::after {

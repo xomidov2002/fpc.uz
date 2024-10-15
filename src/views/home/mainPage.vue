@@ -175,36 +175,7 @@ onUnmounted(() => {
   clearInterval(deletingIntervalId)
   clearTimeout(pauseTimeoutId)
 })
-const activeSection = ref('');
 
-// Scroll to section
-const scrollToSection = (sectionId: string) => {
-  const section = document.getElementById(sectionId);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
-};
-
-// Detect active section
-const observeSections = () => {
-  const sections = document.querySelectorAll('section');
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          activeSection.value = entry.target.id;
-        }
-      });
-    },
-    { threshold: 0.5 } // Trigger when 50% of the section is in view
-  );
-
-  sections.forEach((section) => observer.observe(section));
-};
-
-onMounted(() => {
-  observeSections();
-});
 </script>
 
 <style scoped>
