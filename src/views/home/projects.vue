@@ -87,7 +87,6 @@ const toggleView = () => {
   showAll.value = !showAll.value
 }
 
-
 const openUserModal = ref<boolean>(false)
 
 const currentUser = ref<any>({})
@@ -112,14 +111,29 @@ function toggleVariable() {
 </script>
 
 <template>
-  <BaseUsermodal class="z-50" :isOpen="openUserModal" :info="currentUser" @handleClicked ="toggleVariable" />
+  <BaseUsermodal
+    class="z-50"
+    :isOpen="openUserModal"
+    :info="currentUser"
+    @handleClicked="toggleVariable"
+  />
   <div class="container mx-auto px-5">
-    <p class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600 mb-10">Bizning Loyihalarimmiz</p>
-    <transition-group name="fade" tag="div" class="grid justify-center grid-cols-4 gap-5">
-      <div v-for="(product, index) in visibleProducts" :key="index">
-        <BaseProductCard :option="product" @byInfoUser="getEachUser(product.id)"/>
-      </div>
-    </transition-group>
+    <p
+      class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600 mb-10"
+    >
+      Bizning Loyihalarimmiz
+    </p>
+    <div class="flex justify-center">
+      <transition-group
+        name="fade"
+        tag="div"
+        class="grid justify-center sm:grid-cols-2 grid-cols-1 md:grid-cols-3 gap-5"
+      >
+        <div v-for="(product, index) in visibleProducts" :key="index">
+          <BaseProductCard :option="product" @byInfoUser="getEachUser(product.id)" />
+        </div>
+      </transition-group>
+    </div>
 
     <div class="w-full flex justify-center">
       <button

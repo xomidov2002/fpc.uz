@@ -2,7 +2,6 @@
 import { RouterView } from 'vue-router'
 import TheHeader from '@/components/BaseNavbar/index.vue'
 import TheFooter from '@/components/BaseFooter/index.vue'
-import BaseIcon from '@/components/Icons/index.vue'
 </script>
 <template>
   <div>

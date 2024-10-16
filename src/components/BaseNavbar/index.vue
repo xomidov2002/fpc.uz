@@ -8,6 +8,7 @@ const selectedLanguage = ref(locale.value)
 const isActive = ref(false)
 const activeSection = ref('')
 
+// Language change function
 const changeLanguage = async () => {
   await setLocaleMessage(
     selectedLanguage.value,
@@ -16,10 +17,12 @@ const changeLanguage = async () => {
   locale.value = selectedLanguage.value
 }
 
+// Toggle for mobile menu
 const toggleClass = () => {
   isActive.value = !isActive.value
 }
 
+// Interface for Navbar links
 interface Navbar {
   id: number
   name: string
@@ -36,6 +39,7 @@ const navLinks = computed<Navbar[]>(() => [
   { id: 6, name: t('navbar.clients'), sectionId: '#client-section' },
 ])
 
+// Interface for Language selection
 interface Language {
   id: number
   title: string
@@ -48,7 +52,7 @@ const langs = reactive<Language[]>([
   { id: 2, title: 'UZ', icon: 'uzb', value: 'uz' }
 ])
 
-// Scroll to section
+// Scroll to section on menu click
 const scrollToSection = (sectionId: string) => {
   const cleanId = sectionId.startsWith('#') ? sectionId.slice(1) : sectionId
   const section = document.getElementById(cleanId)
@@ -57,72 +61,81 @@ const scrollToSection = (sectionId: string) => {
   }
 }
 
-// Detect active section with IntersectionObserver
+// Detect active section using IntersectionObserver
+import { nextTick } from 'vue'
+
 const observeSections = () => {
-  const sections = document.querySelectorAll('section')
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          activeSection.value = entry.target.id
-        }
-      })
-    },
-    { threshold: 0.5 } // Sensitivity for activating the section
-  )
-  sections.forEach((section) => observer.observe(section))
+  nextTick(() => {
+    const sections = document.querySelectorAll('section')
+    
+    if (sections.length === 0) {
+      console.warn('No sections found in the document.')
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            activeSection.value = entry.target.id
+          }
+        })
+      },
+      { threshold: 0.5 } // Adjust threshold as needed
+    )
+    console.log(sections)
+    sections.forEach((section) => observer.observe(section))
+  })
 }
 
 onMounted(() => {
   observeSections()
 })
-</script>
 
+</script>
 
 <template>
   <div class="bg-black backdrop-blur-sm nav">
+    <!-- DESKTOP NAVBAR -->
     <div class="md:block hidden container mx-auto my-0 py-6 px-5">
-      <div>
-        <div class="flex items-center justify-between">
-          <!-- LOGO -->
-          <RouterLink to="/">
-            <div class="cursor-pointer select-none flex items-center gap-3">
-              <div class="w-28 h-10 flex items-center">
-                <img src="/logo-1.png" class="object-cover w-full" alt="Logo" />
-              </div>
+      <div class="flex items-center justify-between">
+        <!-- LOGO -->
+        <RouterLink to="/">
+          <div class="cursor-pointer select-none flex items-center gap-3">
+            <div class="w-28 h-10 flex items-center">
+              <img src="/logo-1.png" class="object-cover w-full" alt="Logo" />
             </div>
-          </RouterLink>
-          <!-- MENUS -->
-          <div class="flex item-center gap-8 menus">
-            <div
-              class="cursor-pointer flex items-center select-none"
-              v-for="(navlink, index) in navLinks"
-              :key="index"
-              @click="scrollToSection(navlink.sectionId)"
-              :class="{
-                'active-class': activeSection === navlink.sectionId.slice(1)
-              }"
-            >
-              <a
-                class="all-submenu text-lg text-white hover:text-[#080D75] 2xl:text-2xl font-[semibold]"
-              >
-                {{ navlink.name }}
-              </a>
-            </div>
-
-            <BaseSelect
-              color="white"
-              :options="langs"
-              v-model="$i18n.locale"
-              @change="changeLanguage"
-            />
           </div>
+        </RouterLink>
+        <!-- MENUS -->
+        <div class="flex border border-[#a0a0a0] rounded-3xl overflow-hidden items-center gap-8 menus">
+          <div
+            v-for="(navlink, index) in navLinks"
+            :key="index"
+            @click="scrollToSection(navlink.sectionId)"
+            class="cursor-pointer p-1 flex items-center select-none"
+            :class="{
+              'active-class': activeSection === navlink.sectionId.slice(1)
+            }"
+          >
+            <a class="all-submenu text-lg text-white hover:text-[#080D75] font-[semibold]">
+              {{ navlink.name }}
+            </a>
+          </div>
+        </div>
+        <div >
+          <BaseSelect
+            color="white"
+            :options="langs"
+            v-model="$i18n.locale"
+            @change="changeLanguage"
+          />
         </div>
       </div>
     </div>
-  </div>  
+  </div>
 
-  <!-- FOR MOBILE -->
+  <!-- MOBILE NAVBAR -->
   <div class="block md:hidden fixed top-0 right-0 w-full z-50 bg-[#252525]">
     <div class="container mx-auto px-5 py-5 flex justify-between items-center">
       <RouterLink to="/">
@@ -146,26 +159,26 @@ onMounted(() => {
         v-if="isActive"
         class="fixed top-0 left-0 w-[70%] h-[100vh] bg-[#252525] z-50 p-10 gap-5 flex flex-col pb-16 justify-start"
       >
-        <div>
-          <div class="flex justify-between items-center">
-            <RouterLink to="/">
-              <div class="w-20 flex items-center h-10">
-                <img src="/logo-1.png" class="object-cover w-full" alt="Logo" />
-              </div>
-            </RouterLink>
-            <BaseSelect
-              color="white"
-              :options="langs"
-              v-model="selectedLanguage"
-              @change="changeLanguage"
-            />
-          </div>
+        <div class="flex justify-between items-center">
+          <RouterLink to="/">
+            <div class="w-20 flex items-center h-10">
+              <img src="/logo-1.png" class="object-cover w-full" alt="Logo" />
+            </div>
+          </RouterLink>
+          <BaseSelect
+            color="white"
+            :options="langs"
+            v-model="selectedLanguage"
+            @change="changeLanguage"
+          />
         </div>
-        <div class="cursor-pointer select-none" v-for="(navlink, index) in navLinks" :key="index">
-          <a
-            @click="scrollToSection(navlink.sectionId), toggleClass()"
-            class="all-submenu text-lg text-white 2xl:text-2xl font-[semibold]"
-          >
+        <div
+          v-for="(navlink, index) in navLinks"
+          :key="index"
+          class="cursor-pointer select-none"
+          @click="scrollToSection(navlink.sectionId), toggleClass()"
+        >
+          <a class="all-submenu text-lg text-white font-[semibold]">
             {{ navlink.name }}
           </a>
         </div>
@@ -182,9 +195,11 @@ onMounted(() => {
 
 <style scoped>
 .active-class a {
-  background-color: #ff0000; /* Red background for active */
+  background-color: #080D75; /* Red background for active menu */
   transition: background-color 0.3s ease-in-out; /* Smooth transition */
   color: #fff;
+  border-radius: 24px;
+  overflow: hidden;
 }
 
 .all-submenu {
@@ -242,10 +257,6 @@ onMounted(() => {
   display: block;
 }
 
-.burger input {
-  display: none;
-}
-
 .burger span {
   display: block;
   position: absolute;
@@ -274,22 +285,5 @@ onMounted(() => {
   top: 100%;
   transform-origin: left center;
   transform: translateY(-100%);
-}
-
-.burger input:checked ~ span:nth-of-type(1) {
-  transform: rotate(45deg);
-  top: 0px;
-  left: 5px;
-}
-
-.burger input:checked ~ span:nth-of-type(2) {
-  width: 0%;
-  opacity: 0;
-}
-
-.burger input:checked ~ span:nth-of-type(3) {
-  transform: rotate(-45deg);
-  top: 28px;
-  left: 5px;
 }
 </style>

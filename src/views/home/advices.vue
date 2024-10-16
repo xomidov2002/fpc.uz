@@ -12,30 +12,30 @@ const { t } = useI18n();
     <p class="text-white text-xs sm:text-lg font-[montserrat400] pt-5 w-full md:w-1/2">{{ t('mainPage.practiceSubtitle')
       }}</p>
     <div class="mt-10 relative flex flex-col items-center">
-      <div class="w-full flex h-full gap-5">
-        <div class="w-2/3 flex flex-col gap-5">
-          <div class="flex gap-5 w-full">
-            <div class="images bg-[url('/images/advice-1.jpg')] w-2/5 h-[250px]">
+      <div class="w-full flex flex-col md:flex-row h-full gap-5">
+        <div class="md:w-2/3 flex flex-col gap-5">
+          <div class="flex flex-col sm:flex-row gap-5 w-full">
+            <div class="images bg-[url('/images/advice-1.jpg')] sm:w-2/5 h-[250px]">
               <div class="shadow"></div>
               <div class="box">
                 <p class="text">{{ t('advices.first') }}</p>
               </div>
             </div>
-            <div class="images bg-[url('/images/advice-2.jpg')] w-3/5 h-[250px]">
+            <div class="images bg-[url('/images/advice-2.jpg')] sm:w-3/5 h-[250px]">
               <div class="shadow"></div>
               <div class="box">
                 <p class="text">{{ t('advices.second') }}</p>
               </div>
             </div>
           </div>
-          <div class="flex gap-5 w-full">
-            <div class="images bg-[url('/images/advice-3.webp')] w-3/5 h-[250px]">
+          <div class="flex flex-col sm:flex-row gap-5 w-full">
+            <div class="images bg-[url('/images/advice-3.webp')] sm:w-3/5 h-[250px]">
               <div class="shadow"></div>
               <div class="box">
                 <p class="text">{{ t('advices.third') }}</p>
               </div>
             </div>
-            <div class="images bg-[url('/images/advice-4.jpg')] w-2/5 h-[250px]">
+            <div class="images bg-[url('/images/advice-4.jpg')] sm:w-2/5 h-[250px]">
               <div class="shadow"></div>
               <div class="box">
                 <p class="text">{{ t('advices.fourth') }}</p>
@@ -43,7 +43,7 @@ const { t } = useI18n();
             </div>
           </div>
         </div>
-        <div class="w-1/3">
+        <div class="md:w-1/3 w-full md:h-auto h-[200px]">
           <div class="images bg-[url('/images/advice-5.jpg')] h-full">
             <div class="shadow"></div>
             <div class="box">

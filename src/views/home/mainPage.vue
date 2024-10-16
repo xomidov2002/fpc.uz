@@ -1,6 +1,7 @@
 <template>
-  <div  id="main"
-    class="bg-[url(/lion.jpg)] bg-fixed w-full h-[100vh] bg-no-repeat bg-center bg-cover relative flex justify-start flex-cols items-center"
+  <section
+    id="main"
+    class="section bg-[url(/lion.jpg)] bg-fixed w-full h-[100vh] bg-no-repeat bg-center bg-cover relative flex justify-start flex-cols items-center"
   >
     <div class="container flex justify-between items-center relative mx-auto px-5 select-none">
       <div>
@@ -34,9 +35,7 @@
         </div>
 
         <button class="button-86" role="button">
-          <a class="uppercase font-bold" href="#contact-section">{{
-            t('mainPage.mainButton')
-          }}</a>
+          <a class="uppercase font-bold" href="#contact-section">{{ t('mainPage.mainButton') }}</a>
         </button>
       </div>
     </div>
@@ -59,35 +58,35 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <div class="mt-11">
-    <div id="advices-section">
+    <section id="advices-section">
       <Advices />
-    </div>
+    </section>
 
-    <div id="services-section">
+    <section id="services-section">
       <Services />
-    </div>
+    </section>
 
-    <div id="projects-section">
+    <section id="projects-section">
       <Projects />
-    </div>
+    </section>
 
-    <div id="aboutus-section">
+    <section id="aboutus-section">
       <AboutUs />
-    </div>
+    </section>
 
-    <div id="comments-section">
+    <section id="comments-section">
       <Comments />
-    </div>
+    </section>
 
-    <div id="contact-section">
+    <section id="contact-section">
       <Contact />
-    </div>
+    </section>
 
-    <div id="client-section">
+    <section id="client-section">
       <Client />
-    </div>
+    </section>
   </div>
 </template>
 
@@ -175,12 +174,11 @@ onUnmounted(() => {
   clearInterval(deletingIntervalId)
   clearTimeout(pauseTimeoutId)
 })
-
 </script>
 
 <style scoped>
 .menu-item.active {
-  color: #080D75;
+  color: #080d75;
   font-weight: bold;
 }
 .letter {
