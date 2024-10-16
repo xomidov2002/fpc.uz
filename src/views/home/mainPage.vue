@@ -99,8 +99,6 @@ import Comments from '@/views/home/comments.vue'
 import Contact from '@/views/home/contact.vue'
 import Projects from '@/views/home/projects.vue'
 
-import Card from '@/components/BaseProductCard/index.vue'
-
 import { useI18n } from 'vue-i18n'
 import BaseIcon from '@/components/Icons/index.vue'
 const { t } = useI18n()
