@@ -166,9 +166,9 @@ onMounted(() => {
             </div>
           </RouterLink>
           <BaseSelect
-            color="white"
+          color="white"
             :options="langs"
-            v-model="selectedLanguage"
+            v-model="$i18n.locale"
             @change="changeLanguage"
           />
         </div>
