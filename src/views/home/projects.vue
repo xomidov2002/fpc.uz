@@ -127,7 +127,7 @@ function toggleVariable() {
       <transition-group
         name="fade"
         tag="div"
-        class="grid justify-center sm:grid-cols-2 grid-cols-1 md:grid-cols-3 gap-5"
+        class="grid justify-center sm:grid-cols-2 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5"
       >
         <div v-for="(product, index) in visibleProducts" :key="index">
           <BaseProductCard :option="product" @byInfoUser="getEachUser(product.id)" />

@@ -83,7 +83,6 @@ const observeSections = () => {
       },
       { threshold: 0.5 } // Adjust threshold as needed
     )
-    console.log(sections)
     sections.forEach((section) => observer.observe(section))
   })
 }
@@ -97,7 +96,7 @@ onMounted(() => {
 <template>
   <div class="bg-black backdrop-blur-sm nav">
     <!-- DESKTOP NAVBAR -->
-    <div class="md:block hidden container mx-auto my-0 py-6 px-5">
+    <div class="lg:block hidden container mx-auto my-0 py-6 px-5">
       <div class="flex items-center justify-between">
         <!-- LOGO -->
         <RouterLink to="/">
@@ -108,17 +107,17 @@ onMounted(() => {
           </div>
         </RouterLink>
         <!-- MENUS -->
-        <div class="flex border border-[#a0a0a0] rounded-3xl overflow-hidden items-center gap-8 menus">
+        <div class="flex border border-[#a0a0a0] p-1 rounded-3xl overflow-hidden items-center gap-8 menus">
           <div
             v-for="(navlink, index) in navLinks"
             :key="index"
             @click="scrollToSection(navlink.sectionId)"
-            class="cursor-pointer p-1 flex items-center select-none"
+            class="cursor-pointer one-menu p-1 flex items-center select-none"
             :class="{
               'active-class': activeSection === navlink.sectionId.slice(1)
             }"
           >
-            <a class="all-submenu text-lg text-white hover:text-[#080D75] font-[semibold]">
+            <a class="p-1 text-lg text-white font-[semibold]">
               {{ navlink.name }}
             </a>
           </div>
@@ -136,7 +135,7 @@ onMounted(() => {
   </div>
 
   <!-- MOBILE NAVBAR -->
-  <div class="block md:hidden fixed top-0 right-0 w-full z-50 bg-[#252525]">
+  <div class="block lg:hidden fixed top-0 right-0 w-full z-50 bg-[#252525]">
     <div class="container mx-auto px-5 py-5 flex justify-between items-center">
       <RouterLink to="/">
         <div class="cursor-pointer select-none flex items-center gap-3">
@@ -194,50 +193,12 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.active-class a {
+.active-class {
   background-color: #080D75; /* Red background for active menu */
   transition: background-color 0.3s ease-in-out; /* Smooth transition */
   color: #fff;
   border-radius: 24px;
   overflow: hidden;
-}
-
-.all-submenu {
-  position: relative;
-  padding: 5px;
-}
-
-.all-submenu:hover::after {
-  width: 100%;
-}
-
-.all-submenu::after {
-  content: '';
-  width: 0;
-  height: 2px;
-  background-color: #080d75;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transition: all 0.2s linear;
-}
-
-.all-submenu:hover::after {
-  width: 100%;
-}
-
-.all-submenu::before {
-  content: '';
-  width: 0;
-  background-color: #252b42;
-  right: 0;
-  top: 0;
-  transition: all 0.2s linear;
-  position: absolute;
-}
-
-.all-submenu:hover::before {
-  width: 100%;
 }
 
 .nav {

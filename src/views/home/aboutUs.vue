@@ -107,8 +107,8 @@ function toggleVariable() {
       {{ t('mainPage.businessTitle') }}</p>
     <p class="text-xs sm:text-lg font-[montserrat400] pt-5 text-white w-full md:w-1/2">{{ t('mainPage.businessSubtitle')
       }}</p>
-    <div class="flex flex-wrap md:flex-nowrap items-center pt-11">
-      <div class="md:w-3/5 w-full h-auto flex flex-col gap-5">
+    <div class="flex flex-col lg:flex-row items-center pt-11">
+      <div class="lg:w-3/5 w-full h-auto flex flex-col gap-5">
         <div class="bg-[url('/images/about-1.jpg')] bgimage w-full h-[200px]">
           <div class="shadow"></div>
          <div>
@@ -133,7 +133,7 @@ function toggleVariable() {
           </div>
         </div>
       </div>
-      <div class="md:w-2/5 w-full md:ml-32 relative">
+      <div class="lg:w-2/5 w-full md:ml-32 relative">
         <img src="/robot.png" alt="" class="absolute top-0 opacity-20">
         <p class="text-[#737373] text-sm font-medium tracking-widest mt-5 mb-14">{{ t('mainPage.businessText') }}</p>
         <div>
