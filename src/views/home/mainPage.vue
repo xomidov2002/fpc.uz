@@ -1,10 +1,10 @@
 <template>
   <section
     id="main"
-    class="section bg-[url(/lion.jpg)] bg-fixed w-full h-[100vh] bg-no-repeat bg-center bg-cover relative flex justify-start flex-cols items-center"
+    class="section bg-[#14151B] w-full h-[100vh] relative flex justify-start flex-cols items-center"
   >
     <div class="container flex justify-between items-center relative mx-auto px-5 select-none">
-      <div>
+      <div class="z-10">
         <h1
           class="2xl:text-6xl lg:text-4xl md:text-2xl text-white font-[bold] uppercase tracking-widest leading-normal"
         >
@@ -28,7 +28,7 @@
         >
           {{ t('mainPage.mainSecondTitle') }}
         </h1>
-        <div class="backdrop-blur-sm sm:w-[35%] p-2 m-5 rounded-2xl">
+        <div class="backdrop-blur-sm sm:w-1/2 p-2 m-5 rounded-2xl">
           <p class="2xl:text-xl text-lg 2xl:pl-0 text-white font-[montserrat500] pb-5">
             {{ t('mainPage.mainSubtitle') }}
           </p>
@@ -37,6 +37,20 @@
         <button class="button-86" role="button">
           <a class="uppercase font-bold" href="#contact-section">{{ t('mainPage.mainButton') }}</a>
         </button>
+      </div>
+      <div class="absolute w-full z-0 flex">
+        <div class="clipped-image -right-[120px] bg-[url('/business/banner.jpg')]">
+          <div class="absolute w-full h-full bg-black/40"></div>
+        </div>
+        <div class="clipped-image -right-[40px] bg-[url('/business/banner.jpg')]">
+          <div class="absolute w-full h-full bg-black/40"></div>
+        </div>
+        <div class="clipped-image -left-[40px] bg-[url('/business/building.avif')]">
+          <div class="absolute w-full h-full bg-black/40"></div>
+        </div>
+        <div class="clipped-image -left-[120px] bg-[url('/business/coding.jpeg')]">
+          <div class="absolute w-full h-full bg-black/40"></div>
+        </div>
       </div>
     </div>
 
@@ -175,6 +189,10 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+.clipped-image{
+  clip-path: polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
+  @apply w-1/3 h-[600px] object-cover bg-no-repeat bg-center bg-cover relative
+}
 .menu-item.active {
   color: #080d75;
   font-weight: bold;
