@@ -45,7 +45,10 @@
     "contactText" : "Qanday yordam bera olamiz ?",
     "Submit" : "Yuborish",
     "ourPro" : "Bizning mijozlarimiz nima deyishadi?",
-    "partners" : "Bizning mijozlar"
+    "partners" : "Bizning mijozlar",
+    "ourProjects" : "Bizning loyihalarimmiz",
+    "proButton" : "Ko'proq loyihalar",
+    "proMinButton" : "Kamroq loyihalar"
   },
 
   "team" : {

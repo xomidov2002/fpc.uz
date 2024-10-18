@@ -2,6 +2,8 @@
 import { ref, computed } from 'vue'
 import BaseProductCard from '@/components/BaseProductCard/index.vue'
 import BaseUsermodal from '@/components/BaseUserModal/index.vue'
+import { useI18n } from 'vue-i18n';
+const {t} = useI18n()
 interface Product {
   id: number
   subtitle: string
@@ -121,7 +123,7 @@ function toggleVariable() {
     <p
       class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600 mb-10"
     >
-      Bizning Loyihalarimmiz
+     {{t('mainPage.ourProjects')}}
     </p>
     <div class="flex justify-center">
       <transition-group
@@ -138,9 +140,9 @@ function toggleVariable() {
     <div class="w-full flex justify-center">
       <button
         @click="toggleView"
-        class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+        class="mt-4 px-6 py-2 bg-[#080D75] text-white rounded-lg hover:bg-blue-600"
       >
-        {{ showAll ? 'Kamroq ko‘rish' : 'Ko‘proq ko‘rish' }}
+        {{ showAll ? t('mainPage.proMinButton') : t('mainPage.proButton') }}
       </button>
     </div>
   </div>
