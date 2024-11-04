@@ -13,11 +13,12 @@ const props = defineProps({
 
 <template>
   <div
-    class="bg-[url('/images/about-1.jpg')] bg-cover bg-center bg-no-repeat relative w-[300px] h-[400px] overflow-hidden"
+    :style="{ backgroundImage: `url(${props.option.bgImg})` }"
+    class="bg-cover bg-center bg-no-repeat relative w-[300px] h-[400px] overflow-hidden"
   >
-    <div class="absolute text-white w-full transition-all duration-300 p-5">
+    <div class="bg-color bottom-0 absolute text-white w-full  p-5">
       <p class="text-xl font-bold">{{ props.option.title }}</p>
-      <div class="pt-10">
+      <div class="pt-2">
         <p class="scrollbarActive overflow-scroll h-[100px]">{{ props.option.subtitle }}</p>
       </div>
       <div>
@@ -44,8 +45,7 @@ const props = defineProps({
 .scrollbarActive::-webkit-scrollbar-thumb {
   @apply dark:bg-[#252525] bg-slate-400 hover:bg-slate-500 hover:dark:bg-slate-600 opacity-0 ease-in duration-300 transition rounded-md cursor-pointer;
 }
-.absolute {
-  @apply -bottom-1/2;
+.bg-color {
   background: rgb(0, 0, 0);
   background: linear-gradient(
     0deg,
@@ -53,9 +53,5 @@ const props = defineProps({
     rgba(0, 0, 0, 0.41220238095238093) 76%,
     rgba(255, 255, 255, 0) 100%
   );
-}
-
-.relative:hover .absolute {
-  @apply bottom-0;
 }
 </style>

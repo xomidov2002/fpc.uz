@@ -7,9 +7,9 @@ const {t} = useI18n()
 interface Product {
   id: number
   subtitle: string
-  title: string
+  // title: string
   date: string
-  images: string[]
+  bgImg: string[]
   info: string
 }
 
@@ -20,59 +20,51 @@ const products = computed<Product[]>(() => {
       id: 0,
       subtitle:
         '«Организация производства и ремонта горно-металлургических машин и оборудования на базе Центрального ремонтно-механического завода АО «Алмалыкский ГМК» ',
-      title: 'АО «O’ZOG’IRSANOATLOYIHA»',
+      // title: 'АО «O’ZOG’IRSANOATLOYIHA»',
       date: '2023 май',
-      images: ['/advices/1.jpg', '/advices/2.jpg', '/advices/3.jpg', '/advices/4.jpg'],
+      bgImg: '/ourProjects/agmk.jpg',
       info: 'this is first ID'
     },
     {
       id: 1,
       subtitle:
         '«Организация новых штампосварных мощностей на территории АО «Uzauto Motors» в г. Асака, Андижанской области» ',
-      title: 'АО «O’ZOG’IRSANOATLOYIHA»',
+      // title: 'АО «O’ZOG’IRSANOATLOYIHA»',
       date: '2023 сентябрь',
-      images: ['/advices/2.jpg', '/advices/1.jpg', '/advices/3.jpg', '/advices/4.jpg'],
+      bgImg: '/ourProjects/gm.jpg',
       info: 'this is second ID'
     },
     {
       id: 2,
       subtitle: '«Организация производства автомобилей на новых источниках энергии» ',
-      title: 'АО «O’ZOG’IRSANOATLOYIHA»',
+      // title: 'АО «O’ZOG’IRSANOATLOYIHA»',
       date: '2023 сентябрь',
-      images: ['/advices/3.jpg', '/advices/2.jpg', '/advices/4.jpg', '/advices/1.jpg'],
+      bgImg: '/ourProjects/byd.jpg',
       info: 'this is third ID'
-    },
-    {
-      id: 3,
-      subtitle: '«Организация производства автомобилей на новых источниках энергии» ',
-      title: 'АО «O’ZOG’IRSANOATLOYIHA»',
-      date: '2023 сентябрь',
-      images: ['/advices/4.jpg', '/advices/2.jpg', '/advices/3.jpg', '/advices/1.jpg'],
-      info: 'this is fourth ID'
     },
     {
       id: 4,
       subtitle: 'Маркетинговое исследование для текстильной продукции (лёгкая промышленность)',
-      title: 'ООО «Perfect Textile Company»',
+      // title: 'ООО «Perfect Textile Company»',
       date: '2021 март',
-      images: ['/advices/4.jpg', '/advices/2.jpg', '/advices/3.jpg', '/advices/1.jpg'],
-      info: 'this is fifth ID'
+      bgImg: '/ourProjects/tuval.jpg',
+      info: 'this is fourth ID'
     },
     {
       id: 5,
       subtitle: 'Маркетинговое исследование в сфере общепита',
-      title: 'ООО «Belissimo»',
+      // title: 'ООО «Belissimo»',
       date: '2021 февраль',
-      images: ['/advices/4.jpg', '/advices/2.jpg', '/advices/3.jpg', '/advices/1.jpg'],
-      info: 'this is sixth ID'
+      bgImg: '/ourProjects/bel.jpg',
+      info: 'this is fifth ID'
     },
     {
       id: 6,
       subtitle: 'Маркетинговое исследование в сфере общепита и продвижение брэнда',
-      title: 'Сеть ресторанов «Farfor» (Россия)',
+      // title: 'Сеть ресторанов «Farfor» (Россия)',
       date: '2022-2023 гг',
-      images: ['/advices/4.jpg', '/advices/2.jpg', '/advices/3.jpg', '/advices/1.jpg'],
-      info: 'this is seventh ID'
+      bgImg: '/ourProjects/farfor.jpg',
+      info: 'this is sixth ID'
     }
   ]
 })
