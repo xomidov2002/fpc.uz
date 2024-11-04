@@ -18,53 +18,51 @@ const products = computed<Product[]>(() => {
   return [
     {
       id: 0,
-      subtitle:
-        '«Организация производства и ремонта горно-металлургических машин и оборудования на базе Центрального ремонтно-механического завода АО «Алмалыкский ГМК» ',
+      subtitle: t('ourProjects.agmk.title'),
       // title: 'АО «O’ZOG’IRSANOATLOYIHA»',
-      date: '2023 май',
+      date: t('ourProjects.agmk.data'),
       bgImg: '/ourProjects/agmk.jpg',
-      info: 'this is first ID'
+      info: t('ourProjects.agmk.info'),
     },
     {
       id: 1,
-      subtitle:
-        '«Организация новых штампосварных мощностей на территории АО «Uzauto Motors» в г. Асака, Андижанской области» ',
+      subtitle: t('ourProjects.gm.title'),
       // title: 'АО «O’ZOG’IRSANOATLOYIHA»',
-      date: '2023 сентябрь',
+      date: t('ourProjects.gm.data'),
       bgImg: '/ourProjects/gm.jpg',
-      info: 'this is second ID'
+      info: t('ourProjects.gm.info'),
     },
     {
       id: 2,
-      subtitle: '«Организация производства автомобилей на новых источниках энергии» ',
+      subtitle: t('ourProjects.byd.title'),
       // title: 'АО «O’ZOG’IRSANOATLOYIHA»',
-      date: '2023 сентябрь',
+      date: t('ourProjects.byd.data'),
       bgImg: '/ourProjects/byd.jpg',
-      info: 'this is third ID'
+      info: t('ourProjects.byd.info'),
     },
     {
       id: 4,
-      subtitle: 'Маркетинговое исследование для текстильной продукции (лёгкая промышленность)',
+      subtitle: t('ourProjects.textile.title'),
       // title: 'ООО «Perfect Textile Company»',
-      date: '2021 март',
+      date: t('ourProjects.textile.data'),
       bgImg: '/ourProjects/tuval.jpg',
-      info: 'this is fourth ID'
+      info: t('ourProjects.textile.info'),
     },
     {
       id: 5,
-      subtitle: 'Маркетинговое исследование в сфере общепита',
+      subtitle: t('ourProjects.belissimo.title'),
       // title: 'ООО «Belissimo»',
-      date: '2021 февраль',
+      date: t('ourProjects.belissimo.data'),
       bgImg: '/ourProjects/bel.jpg',
-      info: 'this is fifth ID'
+      info: t('ourProjects.belissimo.info'),
     },
     {
       id: 6,
-      subtitle: 'Маркетинговое исследование в сфере общепита и продвижение брэнда',
+      subtitle: t('ourProjects.farfor.title'),
       // title: 'Сеть ресторанов «Farfor» (Россия)',
-      date: '2022-2023 гг',
+      date: t('ourProjects.farfor.data'),
       bgImg: '/ourProjects/farfor.jpg',
-      info: 'this is sixth ID'
+      info: t('ourProjects.farfor.info'),
     }
   ]
 })

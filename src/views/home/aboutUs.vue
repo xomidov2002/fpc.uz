@@ -11,46 +11,20 @@ const modules = [Pagination]
 const { t } = useI18n()
 const partners = computed(() => {
   return [
-    {
+  {
       id: 1,
+      name: "Xamidov Nurbek",
+      rank: t('team.specialist'),
+      description: 'Nurbek'
+    },
+    {
+      id: 2,
       name: "Shamsiddinov Jo'rabek",
       rank: t('team.director'),
       description: 'Shamsiddinov'
     },
     {
-      id: 2,
-      name: "Xabibullayev Alisher",
-      rank: t('team.menejer'),
-      education: t('team.alisherUniver'),
-      experience: " 6 лет",
-      project: "«Belissimo», Сеть ресторанов «Farfor» (Россия), АО «O’ZOG’IRSANOATLOYIHA», ООО «Perfect Textile Company» "
-
-    },
-    {
       id: 3,
-      name: "Кочуланов Александр Сергеевич",
-      rank: t('team.specialist'),
-      education: t('team.aleksandrUniver'),
-      experience: "4 года ",
-      project: "Сеть ресторанов «Farfor» (Россия) - Фин. модели свыше 10 новых филиалов и Маркетинговое исследование в сфере общепита "
-
-    },
-    {
-      id: 4,
-      name: "Ismoilov Samar",
-      rank: t('team.specialist'),
-      education: t('team.samarUniver'),
-      experience: "5 лет ",
-      certificate: "«POLITECNICO DI TORINO» (Италия) - Mashinasozlik",
-    },
-    {
-      id: 5,
-      name: "Mirzamaxmudov Jasur",
-      rank: t('team.specialist'),
-      description: 'Mirzamaxmudov'
-    },
-    {
-      id: 6,
       name: "Xamidov Azizbek",
       rank: t('team.specialist'),
       education: t('team.azizbekUniver'),
@@ -59,13 +33,16 @@ const partners = computed(() => {
       project: "ООО «Maxsus Metall Sanoat»"
     },
     {
-      id: 7,
-      name: "Xamidov Nurbek",
-      rank: t('team.specialist'),
-      description: 'Nurbek'
+      id: 4,
+      name: "Xabibullayev Alisher",
+      rank: t('team.menejer'),
+      education: t('team.alisherUniver'),
+      experience: " 6 лет",
+      project: "«Belissimo», Сеть ресторанов «Farfor» (Россия), АО «O’ZOG’IRSANOATLOYIHA», ООО «Perfect Textile Company» "
+
     },
     {
-      id: 8,
+      id: 5 ,
       name: "Xomidov Husniddin",
       rank: t('team.specialist'),
       education: t('team.husniddinUniver'),
@@ -97,7 +74,7 @@ function getEachStudentInfo(id: number) {
 function toggleVariable() {
   openStudentsModal.value = !openStudentsModal.value
 }
-
+console.log(partners.value.length)
 
 </script>
 <template>
