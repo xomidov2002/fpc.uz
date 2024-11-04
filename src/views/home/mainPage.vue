@@ -11,15 +11,15 @@
           {{ t('mainPage.mainTitle') }}:
         </h1>
         <div class="service-container py-5">
-          <transition-group name="letter-fade" tag="span" class="sm:text-2xl p-2 rounded-xl">
+          <transition-group name="letter-fade" tag="span" class="sm:text-2xl p-2 ">
             <span
               v-for="(letter, index) in currentLetters"
               :key="currentService + index"
-              class="letter text-white uppercase font-extrabold"
+              class="letter  text-white uppercase font-extrabold"
             >
               <!-- Ensure spaces are properly rendered -->
               <span v-if="letter === ' '">&nbsp;</span>
-              <span v-else>{{ letter }}</span>
+              <span class="font-extrabold text-2xl tracking-wider" v-else>{{ letter }}</span>
             </span>
           </transition-group>
         </div>
@@ -39,16 +39,16 @@
         </button>
       </div>
       <div class="absolute w-full z-0 flex">
-        <div class="clipped-image -right-[120px] bg-[url('/business/banner.jpg')]">
+        <div class="clipped-image lg:-right-[120px] bg-[url('/business/banner.jpg')]">
           <div class="absolute w-full h-full bg-black/40"></div>
         </div>
-        <div class="clipped-image -right-[40px] bg-[url('/business/banner.jpg')]">
+        <div class="clipped-image lg:-right-[40px] bg-[url('/business/banner.jpg')]">
           <div class="absolute w-full h-full bg-black/40"></div>
         </div>
-        <div class="clipped-image -left-[40px] bg-[url('/business/building.avif')]">
+        <div class="clipped-image lg:-left-[40px] bg-[url('/business/building.avif')]">
           <div class="absolute w-full h-full bg-black/40"></div>
         </div>
-        <div class="clipped-image -left-[120px] bg-[url('/business/coding.jpeg')]">
+        <div class="clipped-image lg:-left-[120px] bg-[url('/business/coding.jpeg')]">
           <div class="absolute w-full h-full bg-black/40"></div>
         </div>
       </div>
@@ -191,7 +191,7 @@ onUnmounted(() => {
 <style scoped>
 .clipped-image{
   clip-path: polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
-  @apply w-1/3 h-[600px] object-cover bg-no-repeat bg-center bg-cover relative
+  @apply w-1/3 h-[100vh] object-cover bg-no-repeat bg-center bg-cover relative
 }
 .menu-item.active {
   color: #080d75;

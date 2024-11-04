@@ -117,7 +117,7 @@ onMounted(() => {
               'active-class': activeSection === navlink.sectionId.slice(1)
             }"
           >
-            <a class="p-1 text-lg text-white font-[semibold]">
+            <a class="p-1 text-base text-white font-[semibold]">
               {{ navlink.name }}
             </a>
           </div>
