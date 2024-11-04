@@ -37,7 +37,7 @@ const scrollToSection = (sectionId: string) => {
         <p class="text-white">est. 2022</p>
       </div>
       <div>
-        <p class="text-white uppercase font-bold pb-5 tracking-widest">Biz bilan bog'laning</p>
+        <p class="text-white uppercase font-bold pb-5 tracking-widest">{{ t('footer.contact') }}</p>
         <div class="flex flex-col gap-3">
           <div class="box">
             <BaseIcon name="message" class="w-5 h-5 text-[#080D75]" />
@@ -49,11 +49,11 @@ const scrollToSection = (sectionId: string) => {
           </div>
           <div class="box">
             <BaseIcon name="location" class="w-5 h-5 text-[#080D75]" />
-            <p class="title">Toshkent, Chilonzor tumani Olmazor massivi 15/10</p>
+            <p class="title">{{ t('footer.location') }}</p>
           </div>
           <div class="box">
             <BaseIcon name="calendar" class="w-5 h-5 text-[#080D75]" />
-            <p class="title">Dushanba - shanba</p>
+            <p class="title">{{ t('footer.isOpen') }}</p>
           </div>
         </div>
       </div>
