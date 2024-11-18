@@ -109,13 +109,13 @@ function toggleVariable() {
     :info="currentUser"
     @handleClicked="toggleVariable"
   />
-  <div class="container mx-auto px-5">
+  <div class="container mt-14 mx-auto px-5">
     <p
       class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600 mb-10"
     >
      {{t('mainPage.ourProjects')}}
     </p>
-    <div class="flex justify-center">
+    <div class="flex pt-5 justify-center">
       <transition-group
         name="fade"
         tag="div"
@@ -127,7 +127,7 @@ function toggleVariable() {
       </transition-group>
     </div>
 
-    <div class="w-full flex justify-center">
+    <div class="w-full my-10 flex justify-center">
       <button
         @click="toggleView"
         class="mt-4 px-6 py-2 bg-[#080D75] text-white rounded-lg hover:bg-blue-600"

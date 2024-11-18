@@ -51,13 +51,13 @@ const services = computed(() => {
 })
 </script>
 <template>
-  <div class="container mx-auto mt-10 px-5">
+  <div class="container mx-auto mt-14 px-5">
     <p
-      class="text-xl sm:text-xl md:text-2xl lg:text-3xl text-white font-semibold px-5 border-l-2 sm:py-5 border-l-blue-600">
+      class="text-xl sm:text-xl md:text-2xl lg:text-3xl mb-5 text-white font-semibold px-5 border-l-2 sm:py-5 border-l-blue-600">
       {{ t('mainPage.serviceTitle') }}
     </p>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center sm:px-16 py-10">
-      <div v-for="i in services" class="card overflow-hidden border-[#252525] relative p-5 bg-[#14151B] border-2 border-b-white">
+      <div v-for="i in services" class="card overflow-hidden border-[#252525] rounded-2xl relative p-5 bg-[#14151B] border-2 border-b-white">
         <div class="absolute top-2 left-1/2 -translate-x-1/2">
           <BaseIcon :name="i.icon" class="icon w-10 h-10 text-blue-700" />
         </div>

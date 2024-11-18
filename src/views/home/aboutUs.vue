@@ -5,9 +5,9 @@ import { useI18n } from 'vue-i18n'
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import BaseCardUser from '@/components/BaseCardUser/index.vue'
-const modules = [Pagination]
+const modules = [Pagination, Autoplay]
 const { t } = useI18n()
 const partners = computed(() => {
   return [
@@ -76,6 +76,7 @@ function toggleVariable() {
 }
 console.log(partners.value.length)
 
+const currentIndex = ref(0)
 </script>
 <template>
   <div class="container mx-auto px-5 pb-14">
@@ -84,7 +85,7 @@ console.log(partners.value.length)
       {{ t('mainPage.businessTitle') }}</p>
     <p class="text-xs sm:text-lg font-[montserrat400] pt-5 text-white w-full md:w-1/2">{{ t('mainPage.businessSubtitle')
       }}</p>
-    <div class="flex flex-col lg:flex-row items-center pt-11">
+    <div class="flex flex-col lg:flex-row items-center pt-10">
       <div class="lg:w-3/5 w-full h-auto flex flex-col gap-5">
         <div class="bg-[url('/images/about-1.jpg')] bgimage w-full h-[200px]">
           <div class="shadow"></div>
@@ -130,10 +131,11 @@ console.log(partners.value.length)
       </div>
     </div>
     <p
-      class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold px-5 border-l-2 text-white sm:py-5 border-l-blue-600  mt-10">
+      class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold px-5 border-l-2 text-white sm:py-5 border-l-blue-600  mt-16">
       {{ t("team.ourTeam") }}</p>
-    <div class="mt-8 w-full gap-6 lg:px-10">
-      <swiper :slidesPerView="1" :spaceBetween="10" :pagination="{
+    <div class="mt-16 w-full gap-6 lg:px-10">
+      <swiper :slidesPerView="1" :spaceBetween="10"
+      :pagination="{
         clickable: true,
       }" :breakpoints="{
         '640': {
@@ -148,12 +150,15 @@ console.log(partners.value.length)
           slidesPerView: 4,
           spaceBetween: 50,
         },
-      }" :modules="modules" class="mySwiper">
+      }" :modules="modules" class="mySwiper"
+      :autoplay="{
+      delay: 2500,
+      disableOnInteraction: false,
+    }" >
         <swiper-slide v-for="(person, index) in partners" :key="index">
           <BaseCardUser :cardData="person" @byInfo="getEachStudentInfo(person.id)" />
         </swiper-slide>
       </swiper>
-
     </div>
   </div>
   <BaseModal class="z-50" :isOpen="openStudentsModal" :info="currentStudent" @handleClicked ="toggleVariable" />

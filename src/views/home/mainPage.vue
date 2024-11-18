@@ -1,8 +1,9 @@
 <template>
   <section
     id="main"
-    class="section bg-[#14151B] w-full h-[100vh] relative flex justify-start flex-cols items-center"
+    class="section bg-[url(/business/main-bg.png)] bg-no-repeat bg-cover bg-center w-full h-[100vh] relative flex justify-start flex-cols items-center"
   >
+  <div class="absolute w-full h-full bg-black/40"></div>
     <div class="container flex justify-between items-center relative mx-auto px-5 select-none">
       <div class="z-10">
         <h1
@@ -38,7 +39,7 @@
           <a class="uppercase font-bold" href="#contact-section">{{ t('mainPage.mainButton') }}</a>
         </button>
       </div>
-      <div class="absolute w-full z-0 flex">
+      <!-- <div class="absolute w-full z-0 flex">
         <div class="clipped-image lg:-right-[120px] bg-[url('/business/banner.jpg')]">
           <div class="absolute w-full h-full bg-black/40"></div>
         </div>
@@ -51,7 +52,7 @@
         <div class="clipped-image lg:-left-[120px] bg-[url('/business/coding.jpeg')]">
           <div class="absolute w-full h-full bg-black/40"></div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="w-full hidden sm:flex absolute justify-center bottom-[-70px] z-[1]">
@@ -73,7 +74,12 @@
       </div>
     </div>
   </section>
-  <div class="mt-11">
+  <div class="mt-28">
+
+    <section id="aboutus-section">
+      <AboutUs />
+    </section>
+
     <section id="advices-section">
       <Advices />
     </section>
@@ -84,10 +90,6 @@
 
     <section id="projects-section">
       <Projects />
-    </section>
-
-    <section id="aboutus-section">
-      <AboutUs />
     </section>
 
     <section id="comments-section">
