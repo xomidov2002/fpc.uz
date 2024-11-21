@@ -13,7 +13,7 @@ const partners = computed(() => {
   return [
     {
       id: 1,
-      img: '/partners/1.jfif'
+      img: '/partners/1.jpg'
     },
     {
       id: 1,
