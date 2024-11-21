@@ -96,8 +96,8 @@ const sendMessage = async () => {
         {{ t('mainPage.contact') }}
       </p>
       <div class="w-full p-5 flex flex-wrap lg:flex-nowrap lg:justify-evenly items-center relative">
-        <div class="p-4 border-[7px] border-[#080D75]">
-          <div class="form-container bg-[#14151B]">
+        <div class="p-4 border-[7px] border-[#080D75] rounded-2xl">
+          <div class="form-container bg-[#14151B] rounded-2xl">
             <div class="form">
               <div class="form-group">
                 <label for="name">{{ t('mainPage.contactName') }}</label>

@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue'
 import BaseProductCard from '@/components/BaseProductCard/index.vue'
 import BaseUsermodal from '@/components/BaseUserModal/index.vue'
+import BaseButton from '@/components/BaseButton/index.vue'
 import { useI18n } from 'vue-i18n';
 const {t} = useI18n()
 interface Product {
@@ -128,12 +129,13 @@ function toggleVariable() {
     </div>
 
     <div class="w-full my-10 flex justify-center">
-      <button
+      <BaseButton @click="toggleView"  :name="showAll ? t('mainPage.proMinButton') : t('mainPage.proButton')"/>
+      <!-- <button
         @click="toggleView"
         class="mt-4 px-6 py-2 bg-[#080D75] text-white rounded-lg hover:bg-blue-600"
       >
         {{ showAll ? t('mainPage.proMinButton') : t('mainPage.proButton') }}
-      </button>
+      </button> -->
     </div>
   </div>
 </template>

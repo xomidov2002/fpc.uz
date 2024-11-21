@@ -31,10 +31,10 @@ interface Navbar {
 
 const navLinks = computed<Navbar[]>(() => [
   { id: 0, name: t('navbar.mainPage'), sectionId: '#main' },
-  { id: 1, name: t('navbar.solution'), sectionId: '#advices-section' },
-  { id: 2, name: t('navbar.services'), sectionId: '#services-section' },
-  { id: 3, name: t('navbar.projects'), sectionId: '#projects-section' },
-  { id: 4, name: t('navbar.aboutUs'), sectionId: '#aboutus-section' },
+  { id: 1, name: t('navbar.aboutUs'), sectionId: '#aboutus-section' },
+  { id: 2, name: t('navbar.solution'), sectionId: '#advices-section' },
+  { id: 3, name: t('navbar.services'), sectionId: '#services-section' },
+  { id: 4, name: t('navbar.projects'), sectionId: '#projects-section' },
   { id: 5, name: t('navbar.contact'), sectionId: '#contact-section' },
   { id: 6, name: t('navbar.clients'), sectionId: '#client-section' },
 ])

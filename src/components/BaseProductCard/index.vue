@@ -14,7 +14,7 @@ const props = defineProps({
 <template>
   <div
     :style="{ backgroundImage: `url(${props.option.bgImg})` }"
-    class="bg-cover bg-center bg-no-repeat relative w-[300px] h-[400px] overflow-hidden"
+    class="bg-cover bg-center bg-no-repeat rounded-2xl relative w-[300px] h-[400px] overflow-hidden"
   >
     <div class="bg-color bottom-0 absolute text-white w-full  p-5">
       <p class="text-xl font-bold">{{ props.option.title }}</p>
