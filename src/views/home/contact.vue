@@ -96,7 +96,7 @@ const sendMessage = async () => {
         {{ t('mainPage.contact') }}
       </p>
       <div class="w-full bg-[url('/contact.jpg')] overflow-hidden bg-cover bg-fixed bg-center bg-no-repeat  p-5 flex flex-wrap lg:flex-nowrap lg:justify-evenly items-center relative border-2 border-[#2563EB] rounded-2xl">
-        <div class="absolute w-full h-full bg-black/80"></div>
+        <div class="absolute left-0 top-0 w-full h-full bg-black/80"></div>
         <div class="p-4">
           <div class="form-container bg-none rounded-2xl">
             <div class="form">
