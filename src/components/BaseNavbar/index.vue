@@ -94,9 +94,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="bg-black backdrop-blur-sm nav">
+  <div class="bg-[#0E0F13] nav">
     <!-- DESKTOP NAVBAR -->
-    <div class="lg:block hidden container mx-auto my-0 py-6 px-5">
+    <div class="lg:block hidden container mx-auto my-0 py-3 px-5">
       <div class="flex items-center justify-between">
         <!-- LOGO -->
         <RouterLink to="/">
@@ -204,7 +204,8 @@ onMounted(() => {
 .nav {
   position: fixed;
   width: 100%;
-  background: var(--body-color);
+  /* background: var(--body-color);
+  backdrop-filter: blur(4px); */
   transition: 0.3s;
   z-index: 100;
 }

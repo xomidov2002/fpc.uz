@@ -15,7 +15,7 @@ const { t } = useI18n();
       <div class="w-full flex flex-col md:flex-row h-full gap-5">
         <div class="md:w-2/3 flex flex-col gap-5">
           <div class="flex flex-col sm:flex-row gap-5 w-full">
-            <div class="images bg-[url('/images/advice-1.jpg')] sm:w-2/5 h-[250px]">
+            <div class="images bg-[url('/images/advice-1.png')] sm:w-2/5 h-[250px]">
               <div class="shadow"></div>
               <div class="box">
                 <p class="text">{{ t('advices.first') }}</p>
@@ -29,7 +29,7 @@ const { t } = useI18n();
             </div>
           </div>
           <div class="flex flex-col sm:flex-row gap-5 w-full">
-            <div class="images bg-[url('/images/advice-3.webp')] sm:w-3/5 h-[250px]">
+            <div class="images bg-[url('/images/advice-3.png')] sm:w-3/5 h-[250px]">
               <div class="shadow"></div>
               <div class="box">
                 <p class="text">{{ t('advices.third') }}</p>

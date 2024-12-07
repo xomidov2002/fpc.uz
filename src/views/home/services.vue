@@ -2,6 +2,7 @@
 import BaseIcon from '@/components/Icons/index.vue'
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue';
+import BaseButton from '@/components/BaseButton/index.vue'
 const { t } = useI18n()
 const services = computed(() => {
   return [
@@ -66,6 +67,11 @@ const services = computed(() => {
         </p>
         <p class="text-[#797a7c]">{{ i.num }}</p>
       </div>
+    </div>
+    <div class="w-full flex justify-center">
+      <a href="#contact-section">
+      <BaseButton :name="t('mainPage.mainButton')"/>
+    </a>
     </div>
   </div>
 </template>

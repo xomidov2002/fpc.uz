@@ -8,6 +8,7 @@ import 'swiper/css/pagination'
 import { Pagination, Autoplay } from 'swiper/modules'
 import BaseCardUser from '@/components/BaseCardUser/index.vue'
 import BaseIcon from '@/components/Icons/index.vue'
+import BaseButton from '@/components/BaseButton/index.vue'
 const modules = [Pagination, Autoplay]
 const { t } = useI18n()
 const partners = computed(() => {
@@ -112,6 +113,9 @@ const currentIndex = ref(0)
               </p>
             </div>
           </div>
+          <a href="#contact-section">
+            <BaseButton :name="t('mainPage.aboutUsButton')" />
+          </a>
         </div>
       </div>
 

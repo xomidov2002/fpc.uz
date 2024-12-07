@@ -8,9 +8,8 @@ const {t} = useI18n()
 interface Product {
   id: number
   subtitle: string
-  // title: string
   date: string
-  bgImg: string[]
+  bgImg: string
   info: string
 }
 

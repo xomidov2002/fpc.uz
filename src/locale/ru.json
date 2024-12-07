@@ -46,7 +46,8 @@
     "partners" : "Наши клиенты",
     "ourProjects" : "Наши проекты",
     "proButton" : "Больше проектов",
-    "proMinButton" : "Меньше проектов"
+    "proMinButton" : "Меньше проектов",
+    "aboutUsButton" : "Связаться с нами"
   },
 
   "team" : {
