@@ -88,7 +88,7 @@ const sendMessage = async () => {
 </script>
 
 <template>
-  <div class="bg-[url('/contact.avif')] bg-no-repeat bg-center bg-fixed bg-cover">
+  <div class="bg-[url('/contact.png')] bg-no-repeat bg-center bg-fixed bg-cover">
     <div class="container mx-auto px-5 py-11">
       <p
         class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600 mb-5"
@@ -96,8 +96,8 @@ const sendMessage = async () => {
         {{ t('mainPage.contact') }}
       </p>
       <div class="w-full p-5 flex flex-wrap lg:flex-nowrap lg:justify-evenly items-center relative">
-        <div class="p-4 border-[7px] border-[#080D75] rounded-2xl">
-          <div class="form-container bg-[#14151B] rounded-2xl">
+        <div class="p-4">
+          <div class="form-container bg-none rounded-2xl">
             <div class="form">
               <div class="form-group">
                 <label for="name">{{ t('mainPage.contactName') }}</label>
@@ -134,21 +134,21 @@ const sendMessage = async () => {
             </div>
           </div>
         </div>
-        <div>
-          <p class="font-[semibold] text-white text-2xl tracking-widest pb-11">
+        <div class="pl-56">
+          <p class="font-[semibold] text-[#292A2E] text-2xl tracking-widest pb-11">
             {{ t('mainPage.contact') }}
           </p>
           <div class="flex items-center gap-5">
             <BaseIcon name="message" class="w-10 h-10 text-[#080D75]" />
-            <p class="text-white tracking-widest">example@gmail.com</p>
+            <p class="text-[#292A2E] tracking-widest">example@gmail.com</p>
           </div>
           <div class="flex py-5 items-center gap-5">
             <BaseIcon name="phone" class="w-10 h-10 text-[#080D75]" />
-            <p class="text-white tracking-widest">+998 93 378 63 61</p>
+            <p class="text-[#292A2E] tracking-widest">+998 93 378 63 61</p>
           </div>
           <div class="flex items-center gap-5">
             <BaseIcon name="location" class="w-10 h-10 text-[#080D75]" />
-            <p class="text-white tracking-widest">
+            <p class="text-[#292A2E] tracking-widest">
               Toshkent, Chilonzor tumani Olmazor massivi 15/10
             </p>
           </div>
