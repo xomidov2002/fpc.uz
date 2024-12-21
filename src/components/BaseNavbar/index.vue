@@ -92,7 +92,6 @@ onMounted(() => {
   observeSections()
 })
 const checkScroll = () => {
-  console.log('Scroll position:', window.scrollY)  // Scroll holatini konsolda ko'rsatish
   if (window.scrollY>10) {
     checkScrollEvent.value = true
   } else {

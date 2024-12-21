@@ -7,7 +7,7 @@
     <div class="container flex justify-between items-center relative mx-auto px-5 select-none">
       <div class="z-10">
         <h1
-          class="2xl:text-6xl lg:text-4xl md:text-2xl text-white font-[bold] uppercase tracking-widest leading-normal"
+          class="animate-text 2xl:text-6xl lg:text-4xl md:text-2xl text-white font-[bold] uppercase tracking-widest leading-normal"
         >
           {{ t('mainPage.mainTitle') }}:
         </h1>
@@ -25,17 +25,17 @@
           </transition-group>
         </div>
         <h1
-          class="2xl:text-6xl lg:text-4xl md:text-2xl text-white font-[bold] uppercase tracking-widest leading-normal"
+          class="animate-text 2xl:text-6xl lg:text-4xl md:text-2xl text-white font-[bold] uppercase tracking-widest leading-normal"
         >
           {{ t('mainPage.mainSecondTitle') }}
         </h1>
         <div class="backdrop-blur-sm sm:w-1/2 p-2 m-5 rounded-2xl">
-          <p class="2xl:text-xl text-lg 2xl:pl-0 text-white font-[montserrat500] pb-5">
+          <p class="animate-text 2xl:text-xl text-lg 2xl:pl-0 text-white font-[montserrat500] pb-5">
             {{ t('mainPage.mainSubtitle') }}
           </p>
         </div>
 
-        <button class="button-86" role="button">
+        <button class="button-86 animate-text" role="button">
           <a class="uppercase font-bold" href="#contact-section">{{ t('mainPage.mainButton') }}</a>
         </button>
       </div>
@@ -188,6 +188,18 @@ onUnmounted(() => {
   clearInterval(deletingIntervalId)
   clearTimeout(pauseTimeoutId)
 })
+onMounted(() => {
+  // Animatsiyani qo'shish
+  const elements = document.querySelectorAll('.animate-text')
+  elements.forEach((element, index) => {
+    // 0 va 1 shartiga qarab, chapdan yoki o'ngdan chiqishini tanlash
+    if (index % 2 === 0) {
+      element.classList.add('slide-left')
+    } else {
+      element.classList.add('slide-right')
+    }
+  })
+})
 </script>
 
 <style scoped>
@@ -303,4 +315,34 @@ onUnmounted(() => {
   width: 100%;
   height: 100%;
 }
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-left {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.slide-right {
+  animation: slideInFromRight 1s ease-out forwards;
+}
+
 </style>
