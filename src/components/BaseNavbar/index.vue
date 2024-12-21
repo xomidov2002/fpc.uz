@@ -87,14 +87,26 @@ const observeSections = () => {
   })
 }
 
+const checkScrollEvent = ref(false)
 onMounted(() => {
   observeSections()
 })
+const checkScroll = () => {
+  console.log('Scroll position:', window.scrollY)  // Scroll holatini konsolda ko'rsatish
+  if (window.scrollY>10) {
+    checkScrollEvent.value = true
+  } else {
+    checkScrollEvent.value = false
+  } 
 
+}
+onMounted(() => {
+  window.addEventListener('scroll', checkScroll)
+})
 </script>
 
 <template>
-  <div class="bg-[#0E0F13] nav">
+  <div class="nav " :class="{'bg-[#0A0A0E] shadow-md shadow-[#080D75]': checkScrollEvent}">
     <!-- DESKTOP NAVBAR -->
     <div class="lg:block hidden container mx-auto my-0 py-3 px-5">
       <div class="flex items-center justify-between">

@@ -1,7 +1,7 @@
 <template>
   <section
     id="main"
-    class="section bg-[url(/business/main-bg.png)] bg-no-repeat bg-cover bg-center w-full h-[100vh] relative flex justify-start flex-cols items-center"
+    class="section bg-[url(/images/main.png)] bg-no-repeat bg-cover bg-center w-full h-[100vh] relative flex justify-start flex-cols items-center"
   >
   <div class="absolute w-full h-full bg-black/40"></div>
     <div class="container flex justify-between items-center relative mx-auto px-5 select-none">
