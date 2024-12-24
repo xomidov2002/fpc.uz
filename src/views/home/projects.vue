@@ -3,8 +3,8 @@ import { ref, computed } from 'vue'
 import BaseProductCard from '@/components/BaseProductCard/index.vue'
 import BaseUsermodal from '@/components/BaseUserModal/index.vue'
 import BaseButton from '@/components/BaseButton/index.vue'
-import { useI18n } from 'vue-i18n';
-const {t} = useI18n()
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 interface Product {
   id: number
   subtitle: string
@@ -22,7 +22,7 @@ const products = computed<Product[]>(() => {
       // title: 'АО «O’ZOG’IRSANOATLOYIHA»',
       date: t('ourProjects.agmk.data'),
       bgImg: '/ourProjects/agmk.jpg',
-      info: t('ourProjects.agmk.info'),
+      info: t('ourProjects.agmk.info')
     },
     {
       id: 1,
@@ -30,7 +30,7 @@ const products = computed<Product[]>(() => {
       // title: 'АО «O’ZOG’IRSANOATLOYIHA»',
       date: t('ourProjects.gm.data'),
       bgImg: '/ourProjects/gm.jpg',
-      info: t('ourProjects.gm.info'),
+      info: t('ourProjects.gm.info')
     },
     {
       id: 2,
@@ -38,7 +38,7 @@ const products = computed<Product[]>(() => {
       // title: 'АО «O’ZOG’IRSANOATLOYIHA»',
       date: t('ourProjects.byd.data'),
       bgImg: '/ourProjects/byd.jpg',
-      info: t('ourProjects.byd.info'),
+      info: t('ourProjects.byd.info')
     },
     {
       id: 4,
@@ -46,7 +46,7 @@ const products = computed<Product[]>(() => {
       // title: 'ООО «Perfect Textile Company»',
       date: t('ourProjects.textile.data'),
       bgImg: '/ourProjects/tuval.jpg',
-      info: t('ourProjects.textile.info'),
+      info: t('ourProjects.textile.info')
     },
     {
       id: 5,
@@ -54,7 +54,7 @@ const products = computed<Product[]>(() => {
       // title: 'ООО «Belissimo»',
       date: t('ourProjects.belissimo.data'),
       bgImg: '/ourProjects/bel.jpg',
-      info: t('ourProjects.belissimo.info'),
+      info: t('ourProjects.belissimo.info')
     },
     {
       id: 6,
@@ -62,7 +62,7 @@ const products = computed<Product[]>(() => {
       // title: 'Сеть ресторанов «Farfor» (Россия)',
       date: t('ourProjects.farfor.data'),
       bgImg: '/ourProjects/farfor.jpg',
-      info: t('ourProjects.farfor.info'),
+      info: t('ourProjects.farfor.info')
     }
   ]
 })
@@ -113,7 +113,7 @@ function toggleVariable() {
     <p
       class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600 mb-10"
     >
-     {{t('mainPage.ourProjects')}}
+      {{ t('mainPage.ourProjects') }}
     </p>
     <div class="flex pt-5 justify-center">
       <transition-group
@@ -128,7 +128,10 @@ function toggleVariable() {
     </div>
 
     <div class="w-full my-10 flex justify-center">
-      <BaseButton @click="toggleView"  :name="showAll ? t('mainPage.proMinButton') : t('mainPage.proButton')"/>
+      <BaseButton
+        @click="toggleView"
+        :name="showAll ? t('mainPage.proMinButton') : t('mainPage.proButton')"
+      />
       <!-- <button
         @click="toggleView"
         class="mt-4 px-6 py-2 bg-[#080D75] text-white rounded-lg hover:bg-blue-600"
@@ -136,6 +139,9 @@ function toggleVariable() {
         {{ showAll ? t('mainPage.proMinButton') : t('mainPage.proButton') }}
       </button> -->
     </div>
+  </div>
+  <div class="container mx-auto flex justify-center gap-5">
+    
   </div>
 </template>
 

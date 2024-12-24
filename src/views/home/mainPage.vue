@@ -3,7 +3,7 @@
     id="main"
     class="section bg-[url(/images/main.png)] bg-no-repeat bg-cover bg-center w-full h-[100vh] relative flex justify-start flex-cols items-center"
   >
-  <div class="absolute w-full h-full bg-black/40"></div>
+    <div class="absolute w-full h-full bg-black/40"></div>
     <div class="container flex justify-between items-center relative mx-auto px-5 select-none">
       <div class="z-10">
         <h1
@@ -12,11 +12,11 @@
           {{ t('mainPage.mainTitle') }}:
         </h1>
         <div class="service-container py-5">
-          <transition-group name="letter-fade" tag="span" class="sm:text-2xl p-2 ">
+          <transition-group name="letter-fade" tag="span" class="sm:text-2xl p-2">
             <span
               v-for="(letter, index) in currentLetters"
               :key="currentService + index"
-              class="letter  text-white uppercase font-extrabold"
+              class="letter text-white uppercase font-extrabold"
             >
               <!-- Ensure spaces are properly rendered -->
               <span v-if="letter === ' '">&nbsp;</span>
@@ -75,7 +75,6 @@
     </div>
   </section>
   <div class="mt-28">
-
     <section id="aboutus-section">
       <AboutUs />
     </section>
@@ -203,9 +202,9 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.clipped-image{
+.clipped-image {
   clip-path: polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
-  @apply w-1/3 h-[100vh] object-cover bg-no-repeat bg-center bg-cover relative
+  @apply w-1/3 h-[100vh] object-cover bg-no-repeat bg-center bg-cover relative;
 }
 .menu-item.active {
   color: #080d75;
@@ -344,5 +343,4 @@ onMounted(() => {
 .slide-right {
   animation: slideInFromRight 1s ease-out forwards;
 }
-
 </style>

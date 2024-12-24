@@ -12,7 +12,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div
+  <!-- <div
     :style="{ backgroundImage: `url(${props.option.bgImg})` }"
     class="bg-cover bg-center bg-no-repeat rounded-2xl relative w-[300px] h-[400px] overflow-hidden"
   >
@@ -26,7 +26,20 @@ const props = defineProps({
         <BaseButton @click="$emit('byInfoUser')" :name="t('mainPage.mainButton')" />
       </div>
     </div>
-  </div>
+  </div> -->
+  <div class="w-full h-auto">
+      <div class="w-full h-[200px] rounded-2xl bg-red-900 overflow-hidden">
+        <img :src="props.option.bgImg" class="w-full h-full object-cover">
+      </div>
+      <div class="w-full h-[250px] rounded-2xl bg-[#14151B] -top-10 text-white p-5 relative">
+        <p class="">{{ props.option.title }}</p>
+        <p class="scrollbarActive overflow-scroll h-[100px]">{{ props.option.subtitle }}</p>
+        <p class="text-[#8d8d8d]">{{ props.option.date }}</p>
+        <div class="absolute bottom-5 left-5">
+          <BaseButton @click="$emit('byInfoUser')" :name="t('mainPage.mainButton')" />
+        </div>
+      </div>
+    </div>
 </template>
 
 <style scoped>

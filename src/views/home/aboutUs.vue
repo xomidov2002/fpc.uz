@@ -93,36 +93,9 @@ const currentIndex = ref(0)
     <div class="flex flex-col justify-between gap-5 lg:flex-row items-center pt-10">
       <div class="lg:w-2/5 w-full relative">
         <img src="/robot.png" alt="" class="absolute top-0 opacity-20" />
-        <p class="text-[#737373] text-sm font-medium tracking-widest mt-5 mb-14">
+        <p class="text-[#737373] font-medium mt-5 mb-14">
           {{ t('mainPage.businessText') }}
         </p>
-        <div>
-          <div class="flex gap-3">
-            <img src="/business/human.svg" alt="" />
-            <div>
-              <p class="text-base font-bold text-[#252B42] tracking-wider">
-                {{ t('mainPage.businessser1') }}
-              </p>
-            </div>
-          </div>
-          <div class="flex gap-3 mt-8">
-            <img src="/business/speed.svg" alt="" />
-            <div>
-              <p class="text-base font-bold text-[#252B42] tracking-wider">
-                {{ t('mainPage.businessser2') }}
-              </p>
-            </div>
-          </div>
-          <a href="#contact-section">
-            <BaseButton :name="t('mainPage.aboutUsButton')" />
-          </a>
-        </div>
-      </div>
-
-      <div class="lg:w-3/5 w-full">
-        <div class="w-full h-[300px] overflow-hidden rounded-2xl mb-5">
-          <img src="/images/about-1.jpg" class="w-full h-full object-cover object-center" />
-        </div>
         <div>
           <div>
             <div class="flex gap-2">
@@ -144,6 +117,35 @@ const currentIndex = ref(0)
               <p class="title">{{ t('mainPage.busSolution3') }}</p>
             </div>
             <p class="subtitle">{{ t('mainPage.Solution3') }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:w-3/5 w-full">
+        <div class="w-full h-[300px] overflow-hidden rounded-2xl mb-5">
+          <img src="/images/about-1.jpg" class="w-full h-full object-cover object-center" />
+        </div>
+        <div>
+          <div class="flex gap-3">
+            <img src="/business/human.svg" alt="" />
+            <div>
+              <p class="text-base font-bold text-[#252B42] tracking-wider">
+                {{ t('mainPage.businessser1') }}
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-3 mt-8">
+            <img src="/business/speed.svg" alt="" />
+            <div>
+              <p class="text-base font-bold text-[#252B42] tracking-wider">
+                {{ t('mainPage.businessser2') }}
+              </p>
+            </div>
+          </div>
+          <div class="pt-5">
+            <a href="#contact-section">
+              <BaseButton :name="t('mainPage.aboutUsButton')" />
+            </a>
           </div>
         </div>
       </div>
@@ -227,13 +229,13 @@ const currentIndex = ref(0)
 </template>
 <style scoped>
 .title {
-  @apply tracking-widest font-bold;
+  @apply font-semibold;
 }
 .subtitle {
-  @apply text-base pl-6; 
+  @apply text-base pl-6 mb-5;
 }
 p {
-  @apply text-white mb-5;
+  @apply text-white;
 }
 
 .swiper {

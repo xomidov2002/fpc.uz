@@ -29,7 +29,7 @@ const scrollToSection = (sectionId: string) => {
 <template>
   <div class="bg-[#14151B] p-5 w-full py-24 mt-24">
     <div
-      class="flex justify-between md:justify-around flex-wrap gap-5 items-start border-b border-b-white pb-5 container"
+      class="flex mx-auto justify-between md:justify-around flex-wrap gap-5 items-start border-b border-b-white pb-5 container"
     >
       <div>
         <img src="/logo-1.png" class="w-28" />
@@ -69,11 +69,11 @@ const scrollToSection = (sectionId: string) => {
       </div>
       </div>
     </div>
-    <div class="flex gap-5 justify-start pt-5 container px-5">
+    <!-- <div class="flex gap-5 justify-start pt-5 container px-5">
       <BaseIcon class="w-10 h-10 text-white" name="telegram" />
       <BaseIcon class="w-10 h-10 text-white" name="instagram" />
       <BaseIcon class="w-10 h-10 text-white" name="facebook" />
-    </div>
+    </div> -->
   </div>
 </template>
 <style scoped>
