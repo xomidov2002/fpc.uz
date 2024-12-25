@@ -84,7 +84,7 @@ const windowWidth = ref(window.innerWidth);
     }"
   >
     <swiper-slide v-for="img in partners" :key="img.id">
-      <img :src="img.img" alt="" class="object-cover object-center select-none" />
+      <img :src="img.img" alt="partners" class="object-cover object-center select-none" />
     </swiper-slide>
   </swiper>
   </div>

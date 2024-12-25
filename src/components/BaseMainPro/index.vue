@@ -9,7 +9,7 @@ const props = defineProps({
 <template>
   <div class="w-full sm:px-28">
     <div class="flex items-center justify-center gap-5 pb-5">
-      <img :src="props.cardData.img" class="sm:w-[100px] sm:h-[100px] w-[50px] h-[50px] rounded-[100%] overflow-hidden object-cover">
+      <img :src="props.cardData.img" class="sm:w-[100px] sm:h-[100px] w-[50px] h-[50px] rounded-[100%] overflow-hidden object-cover" alt="comments">
       <div>
         <p class="text-white text-base md:text-2xl">{{ props.cardData.title }}</p>
         <p class="text-[#797a7c] text-xs sm:text-base">{{ props.cardData.subtitle }}</p>

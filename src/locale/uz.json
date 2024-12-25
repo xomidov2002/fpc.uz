@@ -13,6 +13,7 @@
   
 
   "mainPage": {
+    "sending": "Yuborilmoqda",
     "messageSent" : "Xabar muvaffaqiyatli yuborildi!",
     "messageError" : "Iltimos qaytadan urinib ko'ring !",
     "fillAllFields" : "Iltimos ma'lumotlarni to'liq kiriting !",

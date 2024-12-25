@@ -32,7 +32,7 @@ const scrollToSection = (sectionId: string) => {
       class="flex mx-auto justify-between md:justify-around flex-wrap gap-5 items-start border-b border-b-white pb-5 container"
     >
       <div>
-        <img src="/logo-1.png" class="w-28" />
+        <img src="/logo-1.png" class="w-28" alt="logo"/>
         <p class="text-white font-bold tracking-widest">Full Point Consult</p>
       </div>
       <div>

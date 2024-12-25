@@ -29,7 +29,7 @@ const props = defineProps({
   </div> -->
   <div class="w-full h-auto">
       <div class="w-full h-[200px] rounded-2xl bg-red-900 overflow-hidden">
-        <img :src="props.option.bgImg" class="w-full h-full object-cover">
+        <img :src="props.option.bgImg" class="w-full h-full object-cover" alt="products">
       </div>
       <div class="w-full h-[250px] rounded-2xl bg-[#14151B] -top-10 text-white p-5 relative">
         <p class="">{{ props.option.title }}</p>

@@ -92,7 +92,7 @@ const currentIndex = ref(0)
     </p>
     <div class="flex flex-col justify-between gap-5 lg:flex-row items-center pt-10">
       <div class="lg:w-2/5 w-full relative">
-        <img src="/robot.png" alt="" class="absolute top-0 opacity-20" />
+        <img src="/robot.png" alt="robot" class="absolute top-0 opacity-20" />
         <p class="text-[#737373] font-medium mt-5 mb-14">
           {{ t('mainPage.businessText') }}
         </p>
@@ -123,11 +123,11 @@ const currentIndex = ref(0)
 
       <div class="lg:w-3/5 w-full">
         <div class="w-full h-[300px] overflow-hidden rounded-2xl mb-5">
-          <img src="/images/about-1.jpg" class="w-full h-full object-cover object-center" />
+          <img src="/images/about-1.jpg" class="w-full h-full object-cover object-center" alt="AboutUs"/>
         </div>
         <div>
           <div class="flex gap-3">
-            <img src="/business/human.svg" alt="" />
+            <img src="/business/human.svg" alt="icon" />
             <div>
               <p class="text-base font-bold text-[#252B42] tracking-wider">
                 {{ t('mainPage.businessser1') }}
@@ -135,7 +135,7 @@ const currentIndex = ref(0)
             </div>
           </div>
           <div class="flex gap-3 mt-8">
-            <img src="/business/speed.svg" alt="" />
+            <img src="/business/speed.svg" alt="icon" />
             <div>
               <p class="text-base font-bold text-[#252B42] tracking-wider">
                 {{ t('mainPage.businessser2') }}
