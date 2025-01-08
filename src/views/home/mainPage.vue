@@ -1,45 +1,50 @@
 <template>
-  <section
-    id="main"
-    class="section bg-[url(/images/main.png)] bg-no-repeat bg-cover bg-center w-full h-[100vh] relative flex justify-start flex-cols items-center"
-  >
-    <div class="absolute w-full h-full bg-black/40"></div>
-    <div class="container flex justify-between items-center relative mx-auto px-5 select-none">
-      <div class="z-10">
-        <h1
-          class="animate-text 2xl:text-6xl lg:text-4xl md:text-2xl text-white font-[bold] uppercase tracking-widest leading-normal"
-        >
-          {{ t('mainPage.mainTitle') }}:
-        </h1>
-        <div class="service-container py-5">
-          <transition-group name="letter-fade" tag="span" class="sm:text-2xl p-2">
-            <span
-              v-for="(letter, index) in currentLetters"
-              :key="currentService + index"
-              class="letter text-white uppercase font-extrabold"
+  <body>
+    <section
+      id="main"
+      class="section bg-[url(/images/main.png)] bg-no-repeat bg-cover bg-center w-full h-[100vh] relative flex justify-start flex-cols items-center"
+    >
+      <div class="absolute w-full h-full bg-black/40"></div>
+      <div class="container flex justify-between items-center relative mx-auto px-5 select-none">
+        <div class="z-10">
+          <h1
+            class="animate-text 2xl:text-6xl lg:text-4xl md:text-2xl text-white font-[bold] uppercase tracking-widest leading-normal"
+          >
+            {{ t('mainPage.mainTitle') }}:
+          </h1>
+          <div class="service-container py-5">
+            <transition-group name="letter-fade" tag="span" class="sm:text-2xl p-2">
+              <span
+                v-for="(letter, index) in currentLetters"
+                :key="currentService + index"
+                class="letter text-white uppercase font-extrabold"
+              >
+                <!-- Ensure spaces are properly rendered -->
+                <span v-if="letter === ' '">&nbsp;</span>
+                <span class="font-extrabold text-2xl tracking-wider" v-else>{{ letter }}</span>
+              </span>
+            </transition-group>
+          </div>
+          <h1
+            class="animate-text 2xl:text-6xl lg:text-4xl md:text-2xl text-white font-[bold] uppercase tracking-widest leading-normal"
+          >
+            {{ t('mainPage.mainSecondTitle') }}
+          </h1>
+          <div class="backdrop-blur-sm sm:w-1/2 p-2 m-5 rounded-2xl">
+            <p
+              class="animate-text 2xl:text-xl text-lg 2xl:pl-0 text-white font-[montserrat500] pb-5"
             >
-              <!-- Ensure spaces are properly rendered -->
-              <span v-if="letter === ' '">&nbsp;</span>
-              <span class="font-extrabold text-2xl tracking-wider" v-else>{{ letter }}</span>
-            </span>
-          </transition-group>
-        </div>
-        <h1
-          class="animate-text 2xl:text-6xl lg:text-4xl md:text-2xl text-white font-[bold] uppercase tracking-widest leading-normal"
-        >
-          {{ t('mainPage.mainSecondTitle') }}
-        </h1>
-        <div class="backdrop-blur-sm sm:w-1/2 p-2 m-5 rounded-2xl">
-          <p class="animate-text 2xl:text-xl text-lg 2xl:pl-0 text-white font-[montserrat500] pb-5">
-            {{ t('mainPage.mainSubtitle') }}
-          </p>
-        </div>
+              {{ t('mainPage.mainSubtitle') }}
+            </p>
+          </div>
 
-        <button class="button-86 animate-text" role="button">
-          <a class="uppercase font-bold" href="#contact-section">{{ t('mainPage.mainButton') }}</a>
-        </button>
-      </div>
-      <!-- <div class="absolute w-full z-0 flex">
+          <button class="button-86 animate-text" role="button">
+            <a class="uppercase font-bold" href="#contact-section">{{
+              t('mainPage.mainButton')
+            }}</a>
+          </button>
+        </div>
+        <!-- <div class="absolute w-full z-0 flex">
         <div class="clipped-image lg:-right-[120px] bg-[url('/business/banner.jpg')]">
           <div class="absolute w-full h-full bg-black/40"></div>
         </div>
@@ -53,56 +58,57 @@
           <div class="absolute w-full h-full bg-black/40"></div>
         </div>
       </div> -->
-    </div>
+      </div>
 
-    <div class="w-full hidden sm:flex absolute justify-center bottom-[-70px] z-[1]">
-      <div
-        class="w-[80%] flex justify-around border border-white items-center rounded-3xl shadow-lg shadow-[#080D75] bg-[#0A0A0E] p-10"
-      >
-        <div class="flex flex-col gap-2 items-center">
-          <BaseIcon name="future" class="w-10 h-10 text-white" />
-          <p class="text-white font-semibold">{{ t('mainPage.block1') }}</p>
-        </div>
-        <div class="flex flex-col gap-2 items-center">
-          <BaseIcon name="brain" class="sm:w-10 sm:h-10 w-5 h-5 text-white" />
-          <p class="text-white font-semibold">{{ t('mainPage.block2') }}</p>
-        </div>
-        <div class="flex flex-col gap-2 items-center">
-          <BaseIcon name="creative" class="sm:w-10 sm:h-10 w-5 h-5 text-white" />
-          <p class="text-white font-semibold">{{ t('mainPage.block3') }}</p>
+      <div class="w-full hidden sm:flex absolute justify-center bottom-[-70px] z-[1]">
+        <div
+          class="w-[80%] flex justify-around border border-white items-center rounded-3xl shadow-lg shadow-[#080D75] bg-[#0A0A0E] p-10"
+        >
+          <div class="flex flex-col gap-2 items-center">
+            <BaseIcon name="future" class="w-10 h-10 text-white" />
+            <p class="text-white font-semibold">{{ t('mainPage.block1') }}</p>
+          </div>
+          <div class="flex flex-col gap-2 items-center">
+            <BaseIcon name="brain" class="sm:w-10 sm:h-10 w-5 h-5 text-white" />
+            <p class="text-white font-semibold">{{ t('mainPage.block2') }}</p>
+          </div>
+          <div class="flex flex-col gap-2 items-center">
+            <BaseIcon name="creative" class="sm:w-10 sm:h-10 w-5 h-5 text-white" />
+            <p class="text-white font-semibold">{{ t('mainPage.block3') }}</p>
+          </div>
         </div>
       </div>
+    </section>
+    <div class="mt-28">
+      <section id="aboutus-section">
+        <AboutUs />
+      </section>
+
+      <section id="advices-section">
+        <Advices />
+      </section>
+
+      <section id="services-section">
+        <Services />
+      </section>
+
+      <section id="projects-section">
+        <Projects />
+      </section>
+
+      <section id="comments-section">
+        <Comments />
+      </section>
+
+      <section id="contact-section">
+        <Contact />
+      </section>
+
+      <section id="client-section">
+        <Client />
+      </section>
     </div>
-  </section>
-  <div class="mt-28">
-    <section id="aboutus-section">
-      <AboutUs />
-    </section>
-
-    <section id="advices-section">
-      <Advices />
-    </section>
-
-    <section id="services-section">
-      <Services />
-    </section>
-
-    <section id="projects-section">
-      <Projects />
-    </section>
-
-    <section id="comments-section">
-      <Comments />
-    </section>
-
-    <section id="contact-section">
-      <Contact />
-    </section>
-
-    <section id="client-section">
-      <Client />
-    </section>
-  </div>
+  </body>
 </template>
 
 <script setup lang="ts">

@@ -105,7 +105,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="nav " :class="{'bg-[#0A0A0E] shadow-md shadow-[#080D75]': checkScrollEvent}">
+  <nav class="nav " :class="{'bg-[#0A0A0E] shadow-md shadow-[#080D75]': checkScrollEvent}">
     <!-- DESKTOP NAVBAR -->
     <div class="lg:block hidden container mx-auto my-0 py-3 px-5">
       <div class="flex items-center justify-between">
@@ -143,10 +143,10 @@ onMounted(() => {
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 
   <!-- MOBILE NAVBAR -->
-  <div class="block lg:hidden fixed top-0 right-0 w-full z-50 bg-[#252525]">
+  <nav class="block lg:hidden fixed top-0 right-0 w-full z-50 bg-[#252525]">
     <div class="container mx-auto px-5 py-5 flex justify-between items-center">
       <RouterLink to="/">
         <div class="cursor-pointer select-none flex items-center gap-3">
@@ -200,7 +200,7 @@ onMounted(() => {
       v-if="isActive"
       class="absolute top-0 left-0 bg-black/50 w-full h-[100vh] z-40"
     ></div>
-  </div>
+  </nav>
 </template>
 
 <style scoped>

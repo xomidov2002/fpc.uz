@@ -27,7 +27,7 @@ const scrollToSection = (sectionId: string) => {
 }
 </script>
 <template>
-  <div class="bg-[#14151B] p-5 w-full py-24 mt-24">
+  <footer class="bg-[#14151B] p-5 w-full py-24 mt-24">
     <div
       class="flex mx-auto justify-between md:justify-around flex-wrap gap-5 items-start border-b border-b-white pb-5 container"
     >
@@ -74,7 +74,7 @@ const scrollToSection = (sectionId: string) => {
       <BaseIcon class="w-10 h-10 text-white" name="instagram" />
       <BaseIcon class="w-10 h-10 text-white" name="facebook" />
     </div> -->
-  </div>
+  </footer>
 </template>
 <style scoped>
 .router:hover .icon {

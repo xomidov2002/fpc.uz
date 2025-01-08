@@ -67,3 +67,25 @@ body {
   font-weight: bold;
   color: #fff;
 }
+/* Scrollbar ning umumiy uslubi */
+::-webkit-scrollbar {
+  width: 8px; /* Vertikal scroll kengligi */
+  height: 8px; /* Gorizontal scroll balandligi */
+}
+
+/* Scrollbar trek (yo'lak) uslubi */
+::-webkit-scrollbar-track {
+  background: #0A0A0E; /* Track rangi */
+  border-radius: 10px; /* Burchaklarni yumaloqlash */
+}
+
+/* Scrollbar thumb (harakatlanuvchi qismi) uslubi */
+::-webkit-scrollbar-thumb {
+  background: #080D75; /* Thumb rangi */
+  border-radius: 10px; /* Burchaklarni yumaloqlash */
+}
+
+/* Hover effekti */
+::-webkit-scrollbar-thumb:hover {
+  background: #0A0A0E; /* Hover paytida rangi o'zgaradi */
+}
