@@ -40,11 +40,11 @@ const scrollToSection = (sectionId: string) => {
         <div class="flex flex-col gap-3">
           <div class="box">
             <BaseIcon name="message" class="w-5 h-5 text-[#080D75]" />
-            <p class="title">example@gmail.com</p>
+            <p class="title">info@fullpointconsult.com</p>
           </div>
           <div class="box">
             <BaseIcon name="phone" class="w-5 h-5 text-[#080D75]" />
-            <p class="title">+998 93 378 63 61</p>
+            <p class="title">+998 97 594 92 99  </p>
           </div>
           <div class="box">
             <BaseIcon name="location" class="w-5 h-5 text-[#080D75]" />

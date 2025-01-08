@@ -141,16 +141,16 @@ const sendMessage = async () => {
           </p>
           <div class="flex items-center gap-5">
             <BaseIcon name="message" class="w-10 h-10 text-[#080D75]" />
-            <p class="text-white tracking-widest">example@gmail.com</p>
+            <p class="text-white tracking-widest">info@fullpointconsult.com</p>
           </div>
           <div class="flex py-5 items-center gap-5">
             <BaseIcon name="phone" class="w-10 h-10 text-[#080D75]" />
-            <p class="text-white tracking-widest">+998 93 378 63 61</p>
+            <p class="text-white tracking-widest">+998 97 594 92 99</p>
           </div>
           <div class="flex items-center gap-5">
             <BaseIcon name="location" class="w-10 h-10 text-[#080D75]" />
             <p class="text-white tracking-widest">
-              Toshkent, Chilonzor tumani Olmazor massivi 15/10
+              {{ t('footer.location') }}
             </p>
           </div>
         </div>
