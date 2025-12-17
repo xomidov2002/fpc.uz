@@ -4,11 +4,11 @@ import { useHead, useSeoMeta } from '@vueuse/head';
 
 // Define SEO meta tags
 useSeoMeta({
-  title: 'Professional xizmatlar | Marketing, moliyaviy tahlil va boshqalar',
+  title: 'FullPoint — Marketing, IT va Biznes Xizmatlari',
   ogTitle: 'Professional xizmatlar - marketing, moliyaviy tahlil, veb-ishlab chiqish va boshqalar',
   description: "Marketing, moliyaviy hisob va tahlil, buxgalteriya hisobi, texnik-iqtisodiy asoslash, biznesni avtomatlashtirish, veb va ilovalarni ishlab chiqish bo'yicha ekspert xizmatlari. Bizning kompleks yechimlarimiz bilan biznesingiz samaradorligini oshiring.",
   ogDescription: "Biz marketing, moliyaviy tahlil, buxgalteriya hisobi, texnik-iqtisodiy asoslash, biznesni avtomatlashtirish, veb va ilovalarni ishlab chiqish bo'yicha ekspert xizmatlarini taqdim etamiz. Bizning kompleks yechimlarimiz bilan biznesingiz samaradorligini oshiring.",
-  ogImage: '/fpc.png',
+  ogImage: 'https://fullpoint.uz/fpc.png',
   ogUrl: 'https://fullpoint.uz',
   keywords: "marketing, moliyaviy hisob, biznes tahlili, buxgalteriya hisobi, texnik-iqtisodiy asoslash, savdo bo'limi, biznesni avtomatlashtirish, veb-ishlab chiqish, ilovalarni ishlab chiqish, biznesni tizimlashtirish, professional xizmatlar, маркетинг, финансовый учет, бизнес-анализ, бухгалтерия, технико-экономическое обоснование, отдел продаж, автоматизация бизнеса, веб-разработка, разработка приложений, систематизация бизнеса, профессиональные услуги",
 });
